@@ -1,7 +1,7 @@
 package com.example.BacK.application.interfaces.g_Vehicule.vehicule;
 
 import com.example.BacK.application.g_Vehicule.Query.vehicule.GetVehiculeResponse;
-import com.example.BacK.domain.entites.g_Vehicule.Vehicule;
+import com.example.BacK.domain.g_Vehicule.Vehicule;
 
 
 import java.util.List;

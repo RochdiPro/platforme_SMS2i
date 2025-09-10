@@ -2,8 +2,8 @@ package com.example.BacK.infrastructure.services.g_Vehicule;
 
 import com.example.BacK.application.g_Vehicule.Query.vehicule.GetVehiculeResponse;
 import com.example.BacK.application.interfaces.g_Vehicule.vehicule.IVehiculeRepositoryService;
-import com.example.BacK.domain.entites.g_Vehicule.Vehicule;
-import com.example.BacK.infrastructure.repository.g_Vehicule.IVehiculeRepository;
+import com.example.BacK.domain.g_Vehicule.Vehicule;
+import com.example.BacK.infrastructure.repository.g_Vehicule.VehiculeRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
@@ -19,9 +19,9 @@ public class VehiculeRepositoryService implements IVehiculeRepositoryService {
 
     private final ModelMapper _modelMapper;
 
-    private final IVehiculeRepository _vehiculeRepository;
+    private final VehiculeRepository _vehiculeRepository;
 
-    public VehiculeRepositoryService(ModelMapper _modelMapper, IVehiculeRepository _vehiculeRepository) {
+    public VehiculeRepositoryService(ModelMapper _modelMapper, VehiculeRepository _vehiculeRepository) {
         this._modelMapper = _modelMapper;
         this._vehiculeRepository = _vehiculeRepository;
     }

@@ -1,13 +1,12 @@
 package com.example.BacK.application.g_Vehicule.Query.vehicule;
 
-import com.example.BacK.domain.entites.g_Vehicule.Reparation;
-import jakarta.persistence.*;
+import com.example.BacK.application.g_Vehicule.Query.Reparation.GetReparationResponse;
+import com.example.BacK.domain.g_Vehicule.Reparation;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @AllArgsConstructor
@@ -25,5 +24,6 @@ public class GetVehiculeResponse {
     private LocalDate dateAssurance;
     private LocalDate dateExpirationTaxe;
     private String description;
-    private List<Reparation> reparations;
+
+    private List<GetReparationResponse> reparations;
 }

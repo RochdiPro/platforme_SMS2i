@@ -1,7 +1,7 @@
 package com.example.BacK.application.g_Vehicule.Command.vehicule.UpdateVehicule;
 
 import com.example.BacK.application.interfaces.g_Vehicule.vehicule.IVehiculeRepositoryService;
-import com.example.BacK.domain.entites.g_Vehicule.Vehicule;
+import com.example.BacK.domain.g_Vehicule.Vehicule;
 import com.example.MESBack.application.mediator.RequestHandler;
 import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;

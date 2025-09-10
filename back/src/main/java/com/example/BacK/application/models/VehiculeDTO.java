@@ -1,9 +1,5 @@
 package com.example.BacK.application.models;
 
-import com.example.BacK.domain.entites.g_Vehicule.Reparation;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
