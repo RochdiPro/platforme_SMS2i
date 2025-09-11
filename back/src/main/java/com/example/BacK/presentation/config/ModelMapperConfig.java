@@ -1,4 +1,4 @@
-package com.example.MESBack.presentation.config;
+package com.example.BacK.presentation.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

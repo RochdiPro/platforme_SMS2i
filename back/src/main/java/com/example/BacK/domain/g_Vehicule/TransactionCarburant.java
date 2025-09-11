@@ -17,7 +17,6 @@ public class TransactionCarburant extends Auditable {
     @Column(length = 36)
     private String id;
 
-    private String carteId;
     private LocalDate date;
     private String station;
     private String adresseStation;

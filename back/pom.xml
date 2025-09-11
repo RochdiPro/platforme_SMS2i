@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>org.eclipse.milo</groupId>
 			<artifactId>sdk-client</artifactId>
-			<version>0.6.8</version>
+			<version>0.6.12</version>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -139,7 +139,7 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-							<version>1.18.26</version> <!-- Version compatible de Lombok -->
+							<version>1.18.34</version> <!-- Compatible Java 21 -->
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
