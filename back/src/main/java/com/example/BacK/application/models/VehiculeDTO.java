@@ -1,5 +1,7 @@
 package com.example.BacK.application.models;
 
+import com.example.BacK.domain.g_Vehicule.Reparation;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,13 +17,10 @@ public class VehiculeDTO {
     private String id;
     private String serie;
     private String marque;
-    private String modele;
-    private LocalDate dateAchat;
-    private Double kmActuel;
-    private Double kmProchaineVidange;
-    private LocalDate dateProchaineVisite;
+    private LocalDate dateVisiteTechnique;
     private LocalDate dateAssurance;
-    private LocalDate dateExpirationTaxe;
-    private String description;
+    private LocalDate dateTaxe;
+    private Double prochainVidangeKm;
+    private Double kmActuel;
     private List<ReparationDTO> reparations;
 }

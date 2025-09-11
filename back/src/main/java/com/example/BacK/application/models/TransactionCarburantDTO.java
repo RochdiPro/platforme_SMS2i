@@ -1,23 +1,18 @@
-package com.example.BacK.domain.g_Vehicule;
-import com.example.BacK.domain.Auditable;
-import jakarta.persistence.*;
+package com.example.BacK.application.models;
+
+import com.example.BacK.domain.g_Vehicule.CarteGazoil;
+import com.example.BacK.domain.g_Vehicule.TypeCarburant;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TransactionCarburant extends Auditable {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(length = 36)
+public class TransactionCarburantDTO {
     private String id;
-
-
     private LocalDate date;
     private String station;
     private String adresseStation;
@@ -25,13 +20,7 @@ public class TransactionCarburant extends Auditable {
     private Double prixLitre;
     private Double montantTotal;
     private Double kilometrage;
-
-    @Enumerated(EnumType.STRING)
     private TypeCarburant typeCarburant;
-
     private String conducteur;
-
-    @ManyToOne
-    @JoinColumn(name = "carte_id")  // Une seule fois !
-    private CarteGazoil carte;
+    private CarteGazoilDTO carte;
 }

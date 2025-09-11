@@ -23,8 +23,7 @@ public class GetTransactionCarburantQuery {
     private String vehiculeId;
     private String vehiculeSerie;
     private String vehiculeMarque;
-    private LocalDate dateEmission;
-    private LocalDate dateExpiration;
+
     private Double plafondMensuel;
     private Double consommationMensuelle;
     private StatutCarte statut;

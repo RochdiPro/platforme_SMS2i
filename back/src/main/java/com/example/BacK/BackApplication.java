@@ -1,4 +1,4 @@
-package com.example.MESBack;
+package com.example.BacK;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class MesBackApplication {
+public class BackApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MesBackApplication.class, args);
+		SpringApplication.run(BackApplication.class, args);
 	}
 	@Bean
 	public RestTemplate restTemplate() {

@@ -1,20 +1,20 @@
-package com.example.BacK.application.g_Vehicule.Command.carteGazole.addGazoil;
+package com.example.BacK.application.models;
 
 import com.example.BacK.domain.g_Vehicule.FournisseurCarburant;
 import com.example.BacK.domain.g_Vehicule.StatutCarte;
-import com.example.BacK.domain.g_Vehicule.TransactionCarburant;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.time.LocalDate;
 import java.util.List;
 
-
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AddCarteGazoilCommand {
+@Data
+public class CarteGazoilDTO {
 
+    private String id;
     private String numero;
     private String vehiculeId;
     private String vehiculeSerie;
@@ -25,5 +25,6 @@ public class AddCarteGazoilCommand {
     private Double consommationMensuelle;
     private StatutCarte statut;
     private FournisseurCarburant fournisseur;
+    private List<TransactionCarburantDTO> transactions;
 
 }

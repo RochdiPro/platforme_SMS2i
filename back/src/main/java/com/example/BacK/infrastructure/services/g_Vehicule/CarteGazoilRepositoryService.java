@@ -17,13 +17,14 @@ public class CarteGazoilRepositoryService implements ICarteGazoilRepositoryServi
     private final ModelMapper mapper;
     private final CarteGazoleRepository _carteGazoleRepository ;
 
-    public CarteGazoilRepositoryService(ModelMapper mapper, CarteGazoleRepository repo) {
+    public CarteGazoilRepositoryService(ModelMapper mapper, CarteGazoleRepository _carteGazoleRepository) {
         this.mapper = mapper;
-        this._carteGazoleRepository = repo;
+        this._carteGazoleRepository = _carteGazoleRepository;
     }
 
     @Override
     public String add(CarteGazoil carte) {
+        carte.setId(null);
         _carteGazoleRepository.save(carte);
         return "ok";
     }
