@@ -23,33 +23,39 @@ public class VehiculeController {
         this.mediator = mediator;
     }
 
-    @PostMapping("add")
+    // ➤ Ajouter un véhicule
+    @PostMapping
     public ResponseEntity<List<AddVehiculeResponse>> add(@RequestBody AddVehiculeCommand command) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(mediator.sendToHandlers(command));
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(mediator.sendToHandlers(command));
     }
-    @PutMapping("update/{id}")
-    public ResponseEntity<Void> update(@RequestBody UpdateVehiculeCommand command , @PathVariable String id) {
+
+    // ➤ Mettre à jour un véhicule
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> update(@PathVariable String id, @RequestBody UpdateVehiculeCommand command) {
         command.setId(id);
         mediator.sendToHandlers(command);
-        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+        return ResponseEntity.accepted().build();
     }
-    @PostMapping("delete/{id}")
-    public ResponseEntity<Void> delete(@PathVariable String id)
-    {
+
+    // ➤ Supprimer un véhicule
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable String id) {
         mediator.sendToHandlers(new DeleteVehiculeCommand(id));
-        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+        return ResponseEntity.noContent().build();
     }
 
-    @PostMapping("get")
-    public List<Object> filter(@RequestBody GetVehiculeQuery query) {
-        return mediator.sendToHandlers(query);
+    // ➤ Rechercher avec filtres
+    @PostMapping("/search")
+    public ResponseEntity<List<Object>> filter(@RequestBody GetVehiculeQuery query) {
+        return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
 
-    @PostMapping("getall")
-    public List<Object> getall() {
-         GetVehiculeQuery query = new GetVehiculeQuery();
-        return mediator.sendToHandlers(query);
+    // ➤ Récupérer tous les véhicules
+    @GetMapping
+    public ResponseEntity<List<Object>> getAll() {
+        GetVehiculeQuery query = new GetVehiculeQuery();
+        return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
-
-
 }
