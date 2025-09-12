@@ -1,0 +1,15 @@
+package com.example.BacK.application.g_Formation.Command.formation.updateFormation;
+
+import com.example.BacK.application.interfaces.g_Formation.formation.IUpdateFormationCommand;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+
+public class UpdateFormationValidator implements ConstraintValidator<IUpdateFormationCommand, UpdateFormationCommand> {
+    @Override
+    public boolean isValid(UpdateFormationCommand updateFormationCommand, ConstraintValidatorContext constraintValidatorContext) {
+        if (updateFormationCommand == null) {
+            return false;
+        }
+        return true;
+    }
+}
