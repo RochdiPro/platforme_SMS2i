@@ -1,5 +1,6 @@
 package com.example.BacK.application.g_Vehicule.Query.Reparation;
 
+import com.example.BacK.application.models.VehiculeDTO;
 import com.example.BacK.domain.g_Vehicule.TypeReparation;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,4 +18,5 @@ public class GetReparationResponse {
     private Double prix;
     private LocalDate date;
     private String description;
+    private VehiculeDTO vehicule;
 }

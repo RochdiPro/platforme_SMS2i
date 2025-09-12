@@ -49,12 +49,8 @@ public class CarteGazoilRepositoryService implements ICarteGazoilRepositoryServi
 
     @Override
     public List<GetCarteGazoilResponse> filtre(CarteGazoil filter) {
-        ExampleMatcher matcher = ExampleMatcher.matching()
-                .withIgnoreNullValues()
-                .withIgnoreCase()
-                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING);
-        Example<CarteGazoil> example = Example.of(filter, matcher);
-        return _carteGazoleRepository.findAll(example).stream()
+
+        return _carteGazoleRepository.findAll().stream()
                 .map(c -> mapper.map(c, GetCarteGazoilResponse.class))
                 .collect(Collectors.toList());
     }

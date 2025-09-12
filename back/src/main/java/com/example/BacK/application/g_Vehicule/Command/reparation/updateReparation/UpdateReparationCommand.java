@@ -18,5 +18,5 @@ public class UpdateReparationCommand {
     private Double prix;
     private LocalDate date;
     private String description;
-    private Vehicule vehicule;
+    private String vehiculeId;
 }

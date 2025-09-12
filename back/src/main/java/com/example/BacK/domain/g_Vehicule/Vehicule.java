@@ -2,17 +2,20 @@ package com.example.BacK.domain.g_Vehicule;
 
 import com.example.BacK.domain.Auditable;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Vehicule extends Auditable {
 
     @Id
@@ -29,5 +32,8 @@ public class Vehicule extends Auditable {
     private Double kmActuel;
 
     @OneToMany(mappedBy = "vehicule", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Reparation> reparations;
+    private List<Reparation> reparations = new ArrayList<>();
+
+    @OneToMany(mappedBy = "vehicule", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<TransactionCarburant> transactions = new HashSet<>();
 }

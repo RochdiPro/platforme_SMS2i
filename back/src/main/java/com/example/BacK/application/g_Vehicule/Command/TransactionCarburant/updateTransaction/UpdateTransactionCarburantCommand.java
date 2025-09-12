@@ -12,15 +12,15 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class UpdateTransactionCarburantCommand {
     private String id;
-    private String carteId;
     private LocalDate date;
     private String station;
     private String adresseStation;
-    private Double quantite;    // litres
+    private Double quantite;
     private Double prixLitre;
     private Double montantTotal;
     private Double kilometrage;
     private TypeCarburant typeCarburant;
     private String conducteur;
-    private CarteGazoil carte;
+    private String vehiculeId;
+    private String carteId;
 }

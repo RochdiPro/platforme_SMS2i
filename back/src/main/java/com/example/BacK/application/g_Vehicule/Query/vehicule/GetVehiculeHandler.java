@@ -21,9 +21,6 @@ public class GetVehiculeHandler implements RequestHandler<GetVehiculeQuery,List<
 
     @Override
     public List<GetVehiculeResponse> handle(GetVehiculeQuery query) {
-        Vehicule filter = _modelMapper.map(query, Vehicule.class);
-
-        List<GetVehiculeResponse> response = _ivehiculeRepositoryService.filtre(filter);
-        return  response.stream().map((vehicule -> _modelMapper.map(vehicule, GetVehiculeResponse.class))).collect(Collectors.toList());
+        return  _ivehiculeRepositoryService.getAll();
     }
 }

@@ -13,7 +13,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class VehiculeDTO {
-
     private String id;
     private String serie;
     private String marque;
@@ -23,4 +22,5 @@ public class VehiculeDTO {
     private Double prochainVidangeKm;
     private Double kmActuel;
     private List<ReparationDTO> reparations;
+    private List<TransactionCarburantDTO> transactions;
 }

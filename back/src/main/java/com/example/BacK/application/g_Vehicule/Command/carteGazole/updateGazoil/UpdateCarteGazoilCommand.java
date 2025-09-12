@@ -1,5 +1,6 @@
 package com.example.BacK.application.g_Vehicule.Command.carteGazole.updateGazoil;
 
+import com.example.BacK.application.models.TransactionCarburantDTO;
 import com.example.BacK.domain.g_Vehicule.FournisseurCarburant;
 import com.example.BacK.domain.g_Vehicule.StatutCarte;
 import com.example.BacK.domain.g_Vehicule.TransactionCarburant;
@@ -15,15 +16,9 @@ import java.util.List;
 public class UpdateCarteGazoilCommand {
     private String id;
     private String numero;
-    private String vehiculeId;
-    private String vehiculeSerie;
-    private String vehiculeMarque;
     private LocalDate dateEmission;
-    private LocalDate dateExpiration;
-    private Double plafondMensuel;
-    private Double consommationMensuelle;
-
-    private StatutCarte statut;
+    private Double solde;
+    private Double consomation ;
     private FournisseurCarburant fournisseur;
-    private List<TransactionCarburant> transactions;
+    private List<TransactionCarburantDTO> transactions;
 }

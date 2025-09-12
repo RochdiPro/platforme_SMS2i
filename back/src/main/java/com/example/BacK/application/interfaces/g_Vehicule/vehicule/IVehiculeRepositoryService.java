@@ -11,6 +11,6 @@ public interface IVehiculeRepositoryService {
     void update (Vehicule vehicule);
     void delete (String id);
     Vehicule get(String id);
-    List<GetVehiculeResponse> filtre (Vehicule vehicule);
+    List<GetVehiculeResponse> getAll ( );
 
 }

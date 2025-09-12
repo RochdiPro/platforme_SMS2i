@@ -1,7 +1,11 @@
 package com.example.BacK.application.g_Vehicule.Query.vehicule;
 
 import com.example.BacK.application.g_Vehicule.Query.Reparation.GetReparationResponse;
+import com.example.BacK.application.models.ReparationDTO;
+import com.example.BacK.application.models.TransactionCarburantDTO;
 import com.example.BacK.domain.g_Vehicule.Reparation;
+import com.example.BacK.domain.g_Vehicule.TransactionCarburant;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +17,6 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 public class GetVehiculeResponse {
-
     private String id;
     private String serie;
     private String marque;
@@ -21,6 +24,7 @@ public class GetVehiculeResponse {
     private LocalDate dateAssurance;
     private LocalDate dateTaxe;
     private Double prochainVidangeKm;
-    private Double kmActuel ;
-
+    private Double kmActuel;
+    private List<ReparationDTO> reparations;
+    private List<TransactionCarburantDTO> transactions;
 }
