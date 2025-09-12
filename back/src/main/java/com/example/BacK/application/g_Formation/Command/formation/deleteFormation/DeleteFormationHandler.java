@@ -1,7 +1,5 @@
 package com.example.BacK.application.g_Formation.Command.formation.deleteFormation;
 
-import com.example.BacK.application.g_Vehicule.Command.carteGazole.deleteGazoil.DeleteCarteGazoilCommand;
-import com.example.BacK.application.interfaces.g_Vehicule.carteGazole.ICarteGazoilRepositoryService;
 import com.example.BacK.infrastructure.services.g_Formation.FormationRepositoryService;
 import com.example.MESBack.application.mediator.RequestHandler;
 

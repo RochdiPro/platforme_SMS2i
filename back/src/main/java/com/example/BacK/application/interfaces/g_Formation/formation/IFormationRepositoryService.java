@@ -14,7 +14,6 @@ public interface IFormationRepositoryService {
         void delete(Long id);
         Formation get(Long id);
         List<Formation> getAll();
-        List<GetFormationResponse> filtre(Formation filter);
 
 }
 

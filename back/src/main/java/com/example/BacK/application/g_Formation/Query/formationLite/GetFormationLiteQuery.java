@@ -1,30 +1,27 @@
-package com.example.BacK.application.g_Formation.Command.formation.updateFormation;
+package com.example.BacK.application.g_Formation.Query.formationLite;
 
-import com.example.BacK.domain.g_Formation.Certificat;
+import com.example.BacK.domain.g_Formation.Contenu;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-
-
+import java.util.List;
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+public class GetFormationLiteQuery {
 
-public class UpdateFormationCommand {
-    private String id ;
+    private Long id;
     private String titre;
+    private Date dateDemande;
+    private Date dateAffectation;
     private String objectif;
     private String domaine;
     private String type;
-    private Date dateDebut;
-    private Date dateFin;
     private Double prix;
     private Integer nombreMaximal;
     private String description;
-    private String niveau;
-    private Certificat certificat;
-
+    private List<Contenu> contenus;
 
 }

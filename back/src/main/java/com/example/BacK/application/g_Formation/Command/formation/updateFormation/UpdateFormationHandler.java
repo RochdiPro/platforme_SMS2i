@@ -1,6 +1,5 @@
 package com.example.BacK.application.g_Formation.Command.formation.updateFormation;
 import com.example.BacK.domain.g_Formation.Formation;
-import com.example.BacK.domain.g_Vehicule.CarteGazoil;
 import com.example.BacK.infrastructure.services.g_Formation.FormationRepositoryService;
 import com.example.MESBack.application.mediator.RequestHandler;
 import jakarta.persistence.EntityNotFoundException;

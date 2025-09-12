@@ -51,8 +51,4 @@ public class FormationRepositoryService implements IFormationRepositoryService {
         return formationRepository.findAll();
     }
 
-    @Override
-    public List<GetFormationResponse> filtre(Formation filter) {
-        return List.of();
-    }
 }
