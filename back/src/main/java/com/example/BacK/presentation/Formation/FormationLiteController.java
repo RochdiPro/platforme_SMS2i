@@ -1,4 +1,4 @@
-package com.example.BacK.presentation.FormationLite;
+package com.example.BacK.presentation.Formation;
 
 import com.example.BacK.application.g_Formation.Command.formationLite.addFormationLite.AddFormationLiteCommand;
 import com.example.BacK.application.g_Formation.Command.formationLite.deleteFormationLite.DeleteFormationLiteCommand;

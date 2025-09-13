@@ -31,7 +31,7 @@ public class Seance {
     @JoinColumn(name = "chapitre_id")
     private Chapitre chapitre;
 
-    @OneToMany(mappedBy = "seance")
+    @OneToMany(mappedBy = "seance" , cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Contenu> contenus;
 
 

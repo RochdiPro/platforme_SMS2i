@@ -25,12 +25,12 @@ public class Evaluation {
     @JoinColumn(name = "user_formation_id")
     private UserFormation userFormation;
 
-    @OneToOne
+    @OneToOne (cascade = CascadeType.ALL)
     @JoinColumn(name = "certificat_id" )
     private Certificat certificat;
 
-    @OneToOne
-    @JoinColumn(name = "contenu_id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "contenu_id" )
     private Contenu contenu;
 
 

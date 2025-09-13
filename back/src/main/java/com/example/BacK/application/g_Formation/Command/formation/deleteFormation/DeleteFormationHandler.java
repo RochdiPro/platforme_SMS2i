@@ -2,7 +2,9 @@ package com.example.BacK.application.g_Formation.Command.formation.deleteFormati
 
 import com.example.BacK.infrastructure.services.g_Formation.FormationRepositoryService;
 import com.example.MESBack.application.mediator.RequestHandler;
+import org.springframework.stereotype.Component;
 
+@Component("DeleteFormationHandler")
 
 public class DeleteFormationHandler implements RequestHandler <DeleteFormationCommand, Void> {
 
@@ -14,7 +16,7 @@ public class DeleteFormationHandler implements RequestHandler <DeleteFormationCo
 
     @Override
     public Void handle(DeleteFormationCommand command) {
-        this.formationRepositoryService.delete(Long.valueOf(command.getId()));
+        this.formationRepositoryService.delete(command.getId());
         return null;
     }
 }

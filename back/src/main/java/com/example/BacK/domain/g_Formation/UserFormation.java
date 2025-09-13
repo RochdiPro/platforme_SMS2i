@@ -31,7 +31,7 @@ public class UserFormation {
     @JoinColumn(name = "formation_id")
     private Formation formation;
 
-    @OneToMany(mappedBy = "userFormation")
+    @OneToMany(mappedBy = "userFormation" , cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Evaluation> evaluations;
 
 

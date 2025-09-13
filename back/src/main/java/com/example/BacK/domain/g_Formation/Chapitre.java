@@ -25,7 +25,7 @@ public class Chapitre {
     @JoinColumn(name = "formation_id")
     private Formation formation;
 
-    @OneToMany(mappedBy = "chapitre")
+    @OneToMany(mappedBy = "chapitre" , cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Seance> seances;
 
 

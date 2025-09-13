@@ -28,14 +28,14 @@ public class Formation {
     private String description;
     private String niveau;
 
-    @OneToMany(mappedBy = "formation" )
+    @OneToMany(mappedBy = "formation" , cascade = CascadeType.ALL, orphanRemoval = true )
     private List<UserFormation> users;
 
-    @OneToOne
-    @JoinColumn(name = "certificat_id" )
+    @OneToOne (cascade = CascadeType.ALL)
+    @JoinColumn(name = "certificat_id"  )
     private Certificat certificat;
 
-    @OneToMany(mappedBy = "formation")
+    @OneToMany(mappedBy = "formation" , cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Chapitre> chapitres;
 
 

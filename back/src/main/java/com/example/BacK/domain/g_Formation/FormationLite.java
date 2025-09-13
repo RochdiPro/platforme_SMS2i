@@ -28,7 +28,7 @@ public class FormationLite {
     private Integer nombreMaximal;
     private String description;
 
-    @OneToMany(mappedBy = "formationLite")
+    @OneToMany(mappedBy = "formationLite" , cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Contenu> contenus;
 
 }
