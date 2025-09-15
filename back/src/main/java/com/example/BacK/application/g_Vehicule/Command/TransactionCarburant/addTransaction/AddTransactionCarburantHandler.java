@@ -43,9 +43,12 @@ public class AddTransactionCarburantHandler implements RequestHandler<AddTransac
         transaction.setDate(command.getDate());
         transaction.setVehicule(foundVehicule);
         transaction.setCarte(foundCarte);
+        transaction.setConsommation(command.getConsommation());
         transaction.setId(null);
 
         String id = this.transactionCarburantRepositoryService.add(transaction);
+        vehiculeRepositoryService.mise_a_jour_km(foundVehicule,transaction.getKilometrage());
+        carteGazoilRepositoryService.mise_a_jourSolde(foundCarte,transaction.getMontantTotal());
         return new AddTransactionCarubrantResponse(id);
     }
 }

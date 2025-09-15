@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @Data
 public class GetReparationResponse {
     private String id;
+    private String url;
     private String vehicleId;
     private TypeReparation type;
     private Double prix;

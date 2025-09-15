@@ -30,6 +30,9 @@ public class Vehicule extends Auditable {
     private LocalDate dateTaxe;
     private Double prochainVidangeKm;
     private Double kmActuel;
+    private Double prochaineChaineKm ;
+    private double consommation100km ;
+    private LocalDate dateChangementBatterie;
 
     @OneToMany(mappedBy = "vehicule", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Reparation> reparations = new ArrayList<>();

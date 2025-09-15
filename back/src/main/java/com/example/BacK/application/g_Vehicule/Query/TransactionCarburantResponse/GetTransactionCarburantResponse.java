@@ -31,4 +31,6 @@ public class GetTransactionCarburantResponse {
     private String conducteur;
     private CarteGazoilDTO carte;
     private VehiculeDTO vehicule;
+    private double consommation;
+
 }

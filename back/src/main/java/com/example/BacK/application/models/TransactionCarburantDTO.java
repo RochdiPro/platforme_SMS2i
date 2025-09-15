@@ -23,4 +23,5 @@ public class TransactionCarburantDTO {
     private TypeCarburant typeCarburant;
     private String conducteur;
     private CarteGazoilDTO carte;
+    private double consommation;
 }

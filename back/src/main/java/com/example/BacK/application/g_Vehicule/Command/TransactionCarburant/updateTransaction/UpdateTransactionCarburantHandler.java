@@ -46,6 +46,8 @@ public class UpdateTransactionCarburantHandler implements RequestHandler<UpdateT
         existingEntity.setTypeCarburant(command.getTypeCarburant());
         existingEntity.setConducteur(command.getConducteur());
         existingEntity.setDate(command.getDate());
+        existingEntity.setConsommation(command.getConsommation());
+
         existingEntity.setVehicule(foundVehicule);
         existingEntity.setCarte(foundCarte);
 

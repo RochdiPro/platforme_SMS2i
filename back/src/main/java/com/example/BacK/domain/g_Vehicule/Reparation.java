@@ -18,6 +18,7 @@ public class Reparation extends Auditable {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36)
     private String id;
+    private String url;
 
     @Enumerated(EnumType.STRING)
     private TypeReparation type;

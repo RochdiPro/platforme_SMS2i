@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-
-
 @Service
 public class VehiculeRepositoryService implements IVehiculeRepositoryService {
 
@@ -24,7 +22,6 @@ public class VehiculeRepositoryService implements IVehiculeRepositoryService {
         this._modelMapper = _modelMapper;
         this._vehiculeRepository = _vehiculeRepository;
     }
-
 
     @Override
     public String add(Vehicule vehicule) {
@@ -71,8 +68,7 @@ public class VehiculeRepositoryService implements IVehiculeRepositoryService {
             List<TransactionCarburantDTO> transactionDTOs = v.getTransactions().stream()
                     .map(t -> {
                         TransactionCarburantDTO tdto = _modelMapper.map(t, TransactionCarburantDTO.class);
-                       /* tdto.setVehiculeId(v.getId());
-                        tdto.setCarteId(t.getCarte() != null ? t.getCarte().getId() : null);*/
+
                         return tdto;
                     }).toList();
             dto.setTransactions(transactionDTOs);
@@ -80,4 +76,12 @@ public class VehiculeRepositoryService implements IVehiculeRepositoryService {
             return dto;
         }).toList();
     }
+
+    @Override
+    public void mise_a_jour_km(Vehicule vehicule, double km) {
+        vehicule.setKmActuel(km);
+        this._vehiculeRepository.save(vehicule);
+    }
+
+
 }

@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface CarteGazoleRepository extends JpaRepository<CarteGazoil, String> {
+
     @EntityGraph(attributePaths = { "transactions"})
     List<CarteGazoil> findAll();
 }

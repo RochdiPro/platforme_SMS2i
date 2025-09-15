@@ -22,10 +22,7 @@ public class GetCarteGazoilHandler implements RequestHandler<GetCarteGazoilQuery
     @Override
     public List<GetCarteGazoilResponse> handle(GetCarteGazoilQuery query) {
         CarteGazoil filter = modelMapper.map(query, CarteGazoil.class);
+        return carteGazoilRepositoryService.getall( );
 
-        List<GetCarteGazoilResponse> results = carteGazoilRepositoryService.filtre(filter);
-        return results.stream()
-                .map(carte -> modelMapper.map(carte, GetCarteGazoilResponse.class))
-                .collect(Collectors.toList());
     }
 }

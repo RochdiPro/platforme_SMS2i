@@ -29,4 +29,6 @@ public class GetTransactionCarburantQuery {
     private StatutCarte statut;
     private FournisseurCarburant fournisseur;
     private List<TransactionCarburant> transactions;
+    private double consommation;
+
 }

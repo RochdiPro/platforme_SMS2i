@@ -21,6 +21,9 @@ public class VehiculeDTO {
     private LocalDate dateTaxe;
     private Double prochainVidangeKm;
     private Double kmActuel;
+    private Double prochaineChaineKm ;
+    private double consommation100km ;
+    private LocalDate dateChangementBatterie;
     private List<ReparationDTO> reparations;
     private List<TransactionCarburantDTO> transactions;
 }

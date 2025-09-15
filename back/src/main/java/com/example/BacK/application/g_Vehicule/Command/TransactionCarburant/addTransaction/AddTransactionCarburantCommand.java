@@ -24,4 +24,6 @@ public class AddTransactionCarburantCommand {
     private String conducteur;
     private String vehiculeId;
     private String carteId;
+    private double consommation;
+
 }

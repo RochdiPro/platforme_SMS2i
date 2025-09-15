@@ -12,5 +12,6 @@ public interface IVehiculeRepositoryService {
     void delete (String id);
     Vehicule get(String id);
     List<GetVehiculeResponse> getAll ( );
+    void mise_a_jour_km ( Vehicule vehicule , double KM);
 
 }

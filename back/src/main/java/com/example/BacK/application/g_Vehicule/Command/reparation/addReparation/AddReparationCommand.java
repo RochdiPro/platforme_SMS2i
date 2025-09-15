@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AddReparationCommand {
+    private String url;
     private TypeReparation type;
     private Double prix;
     private LocalDate date;

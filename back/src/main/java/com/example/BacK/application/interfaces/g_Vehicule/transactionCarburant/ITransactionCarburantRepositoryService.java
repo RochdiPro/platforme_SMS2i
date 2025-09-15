@@ -12,4 +12,5 @@ public interface ITransactionCarburantRepositoryService {
     void delete(String id);
     TransactionCarburant get(String id);
     List<GetTransactionCarburantResponse> filtre(TransactionCarburant filter);
+    List<GetTransactionCarburantResponse> getall( );
 }
