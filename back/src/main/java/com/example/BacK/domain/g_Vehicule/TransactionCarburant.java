@@ -1,15 +1,15 @@
 package com.example.BacK.domain.g_Vehicule;
 import com.example.BacK.domain.Auditable;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class TransactionCarburant extends Auditable {
 
     @Id
@@ -17,7 +17,6 @@ public class TransactionCarburant extends Auditable {
     @Column(length = 36)
     private String id;
 
-    private String carteId;
     private LocalDate date;
     private String station;
     private String adresseStation;
@@ -25,6 +24,8 @@ public class TransactionCarburant extends Auditable {
     private Double prixLitre;
     private Double montantTotal;
     private Double kilometrage;
+    private double consommation;
+
 
     @Enumerated(EnumType.STRING)
     private TypeCarburant typeCarburant;
@@ -32,6 +33,10 @@ public class TransactionCarburant extends Auditable {
     private String conducteur;
 
     @ManyToOne
-    @JoinColumn(name = "carte_id")
+    @JoinColumn(name = "carte_id", nullable = false)
     private CarteGazoil carte;
+
+    @ManyToOne
+    @JoinColumn(name = "vehicule_id", nullable = false)
+    private Vehicule vehicule;
 }

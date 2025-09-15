@@ -14,16 +14,11 @@ import java.time.LocalDate;
 public class GetReparationQuery {
 
     private String id;
-
+    private String url;
     private String vehicleId;
-
-
     private TypeReparation type;
-
     private Double prix;
     private LocalDate date;
-
     private String description;
-
     private Vehicule vehicule;
 }

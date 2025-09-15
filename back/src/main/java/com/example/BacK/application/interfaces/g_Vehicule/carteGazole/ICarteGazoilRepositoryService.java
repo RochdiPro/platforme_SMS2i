@@ -10,5 +10,6 @@ public interface ICarteGazoilRepositoryService {
     void update(CarteGazoil carte);
     void delete(String id);
     CarteGazoil get(String id);
-    List<GetCarteGazoilResponse> filtre(CarteGazoil filter);
+    List<GetCarteGazoilResponse> getall( );
+    void mise_a_jourSolde(CarteGazoil carteGazoil , double montant);
 }

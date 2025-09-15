@@ -58,4 +58,8 @@ public class VehiculeController {
         GetVehiculeQuery query = new GetVehiculeQuery();
         return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
+    @GetMapping("/ping")
+    public ResponseEntity<String> ping() {
+        return ResponseEntity.ok("pong");
+    }
 }

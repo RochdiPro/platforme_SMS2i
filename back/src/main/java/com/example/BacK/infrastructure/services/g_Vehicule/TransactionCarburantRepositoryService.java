@@ -58,5 +58,10 @@ public class TransactionCarburantRepositoryService implements ITransactionCarbur
                 .map(t -> mapper.map(t, GetTransactionCarburantResponse.class))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<GetTransactionCarburantResponse> getall() {
+        return repo.findAll().stream().map(t -> mapper.map(t, GetTransactionCarburantResponse.class)).collect(Collectors.toList());
+    }
 }
 

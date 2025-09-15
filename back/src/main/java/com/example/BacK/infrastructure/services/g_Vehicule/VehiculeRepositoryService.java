@@ -2,16 +2,13 @@ package com.example.BacK.infrastructure.services.g_Vehicule;
 
 import com.example.BacK.application.g_Vehicule.Query.vehicule.GetVehiculeResponse;
 import com.example.BacK.application.interfaces.g_Vehicule.vehicule.IVehiculeRepositoryService;
+import com.example.BacK.application.models.ReparationDTO;
+import com.example.BacK.application.models.TransactionCarburantDTO;
 import com.example.BacK.domain.g_Vehicule.Vehicule;
 import com.example.BacK.infrastructure.repository.g_Vehicule.VehiculeRepository;
 import org.modelmapper.ModelMapper;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.stream.Collectors;
-
 
 
 @Service
@@ -25,7 +22,6 @@ public class VehiculeRepositoryService implements IVehiculeRepositoryService {
         this._modelMapper = _modelMapper;
         this._vehiculeRepository = _vehiculeRepository;
     }
-
 
     @Override
     public String add(Vehicule vehicule) {
@@ -53,13 +49,39 @@ public class VehiculeRepositoryService implements IVehiculeRepositoryService {
     }
 
     @Override
-    public List<GetVehiculeResponse> filtre(Vehicule filter) {
-        ExampleMatcher matcher = ExampleMatcher.matching()
-                .withIgnoreNullValues()
-                .withIgnoreCase()
-                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING); // ou .CONTAINING pour un LIKE
-        Example<Vehicule> example = Example.of(filter, matcher);
-        List<GetVehiculeResponse> result = _vehiculeRepository.findAll(example).stream().map(vehicule -> _modelMapper.map(vehicule, GetVehiculeResponse.class)).collect(Collectors.toList());
-        return result;
+    public List<GetVehiculeResponse> getAll( ) {
+        List<Vehicule> vehicules = _vehiculeRepository.findAll();
+
+        return vehicules.stream().map(v -> {
+            GetVehiculeResponse dto = _modelMapper.map(v, GetVehiculeResponse.class);
+
+            // Mapper les réparations
+            List<ReparationDTO> reparationDTOs = v.getReparations().stream()
+                    .map(r -> {
+                        ReparationDTO rdto = _modelMapper.map(r, ReparationDTO.class);
+                        rdto.setVehicleId(v.getId()); // juste l'id
+                        return rdto;
+                    }).toList();
+            dto.setReparations(reparationDTOs);
+
+            // Mapper les transactions
+            List<TransactionCarburantDTO> transactionDTOs = v.getTransactions().stream()
+                    .map(t -> {
+                        TransactionCarburantDTO tdto = _modelMapper.map(t, TransactionCarburantDTO.class);
+
+                        return tdto;
+                    }).toList();
+            dto.setTransactions(transactionDTOs);
+
+            return dto;
+        }).toList();
     }
+
+    @Override
+    public void mise_a_jour_km(Vehicule vehicule, double km) {
+        vehicule.setKmActuel(km);
+        this._vehiculeRepository.save(vehicule);
+    }
+
+
 }

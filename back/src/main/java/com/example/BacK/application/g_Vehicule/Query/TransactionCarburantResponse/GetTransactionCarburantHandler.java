@@ -23,11 +23,7 @@ public class GetTransactionCarburantHandler implements RequestHandler<GetTransac
 
     @Override
     public List<GetTransactionCarburantResponse> handle(GetTransactionCarburantQuery query) {
-        TransactionCarburant filter = modelMapper.map(query, TransactionCarburant.class);
 
-        List<GetTransactionCarburantResponse> results = transactionCarburantRepositoryService.filtre(filter);
-        return results.stream()
-                .map(transaction -> modelMapper.map(transaction, GetTransactionCarburantResponse.class))
-                .collect(Collectors.toList());
+        return transactionCarburantRepositoryService.getall();
     }
 }

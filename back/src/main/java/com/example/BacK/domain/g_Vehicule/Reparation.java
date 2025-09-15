@@ -2,24 +2,23 @@ package com.example.BacK.domain.g_Vehicule;
 
 import com.example.BacK.domain.Auditable;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Reparation extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36)
     private String id;
-
-    private String vehicleId;
+    private String url;
 
     @Enumerated(EnumType.STRING)
     private TypeReparation type;
