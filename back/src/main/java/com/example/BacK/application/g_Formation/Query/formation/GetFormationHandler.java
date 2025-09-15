@@ -2,7 +2,7 @@ package com.example.BacK.application.g_Formation.Query.formation;
 
 import com.example.BacK.domain.g_Formation.Formation;
 import com.example.BacK.infrastructure.services.g_Formation.FormationRepositoryService;
-import com.example.MESBack.application.mediator.RequestHandler;
+import com.example.Back.application.mediator.RequestHandler;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 

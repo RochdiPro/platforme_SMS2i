@@ -23,6 +23,6 @@ public class FormationDTO {
     private Integer nombreMaximal;
     private String description;
     private String niveau;
-    private Certificat certificat;
+    private CertificatDTO certificat;
 
 }

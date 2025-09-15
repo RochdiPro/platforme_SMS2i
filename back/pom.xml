@@ -34,12 +34,11 @@
 		<dependency>
 			<groupId>jakarta.validation</groupId>
 			<artifactId>jakarta.validation-api</artifactId>
-			<version>3.0.2</version> <!-- Vous pouvez vérifier si une version plus récente est disponible -->
+			<version>3.0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.milo</groupId>
 			<artifactId>sdk-client</artifactId>
-			<version>0.6.12</version>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -80,6 +79,11 @@
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-crypto</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>jakarta.validation</groupId>
 			<artifactId>jakarta.validation-api</artifactId>

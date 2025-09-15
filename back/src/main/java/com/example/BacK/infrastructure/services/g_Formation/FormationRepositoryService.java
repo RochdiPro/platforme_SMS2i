@@ -1,7 +1,6 @@
 package com.example.BacK.infrastructure.services.g_Formation;
 
-import com.example.BacK.application.g_Formation.Query.formation.GetFormationResponse;
-import com.example.BacK.application.interfaces.g_Formation.formation.IFormationRepositoryService;
+import com.example.BacK.application.interfaces.g_Formation.Formation.IFormationRepositoryService;
 import com.example.BacK.domain.g_Formation.Formation;
 import com.example.BacK.infrastructure.repository.g_Formation.FormationRepository;
 import org.springframework.stereotype.Service;
@@ -25,7 +24,7 @@ public class FormationRepositoryService implements IFormationRepositoryService {
     public void update(Formation formation) {
         Optional<Formation> existing = formationRepository.findById(formation.getId());
         if (existing.isPresent()) {
-            formationRepository.save(formation); // save fait update si id déjà présent
+            formationRepository.save(formation);
         } else {
             throw new RuntimeException("Formation avec ID " + formation.getId() + " introuvable ❌");
         }

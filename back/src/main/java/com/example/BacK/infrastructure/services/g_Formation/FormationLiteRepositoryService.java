@@ -1,6 +1,6 @@
 package com.example.BacK.infrastructure.services.g_Formation;
 
-import com.example.BacK.application.interfaces.g_Formation.formationLite.IFormationLiteRepositoryService;
+import com.example.BacK.application.interfaces.g_Formation.FormationLite.IFormationLiteRepositoryService;
 import com.example.BacK.domain.g_Formation.FormationLite;
 import com.example.BacK.infrastructure.repository.g_Formation.FormationLiteRepository;
 import java.util.List;

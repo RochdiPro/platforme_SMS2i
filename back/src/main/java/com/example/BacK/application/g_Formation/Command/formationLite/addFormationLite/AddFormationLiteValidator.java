@@ -1,6 +1,6 @@
 package com.example.BacK.application.g_Formation.Command.formationLite.addFormationLite;
 
-import com.example.BacK.application.interfaces.g_Formation.formationLite.IAddFormationLiteCommand;
+import com.example.BacK.application.interfaces.g_Formation.FormationLite.IAddFormationLiteCommand;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 

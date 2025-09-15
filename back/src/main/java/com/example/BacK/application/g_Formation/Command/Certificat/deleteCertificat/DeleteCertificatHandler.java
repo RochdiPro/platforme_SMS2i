@@ -3,7 +3,7 @@ package com.example.BacK.application.g_Formation.Command.Certificat.deleteCertif
 
 import com.example.BacK.infrastructure.services.g_Formation.CertificatRepositoryService;
 import org.springframework.stereotype.Component;
-import com.example.MESBack.application.mediator.RequestHandler;
+import com.example.Back.application.mediator.RequestHandler;
 
 
 @Component("DeleteCertificatHandler")

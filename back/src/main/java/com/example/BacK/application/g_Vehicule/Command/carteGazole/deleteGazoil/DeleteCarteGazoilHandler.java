@@ -1,7 +1,7 @@
 package com.example.BacK.application.g_Vehicule.Command.carteGazole.deleteGazoil;
 
  import com.example.BacK.application.interfaces.g_Vehicule.carteGazole.ICarteGazoilRepositoryService;
-import com.example.MESBack.application.mediator.RequestHandler;
+import com.example.Back.application.mediator.RequestHandler;
 import org.springframework.stereotype.Component;
 
 @Component("DeleteCarteGazoilHandler")

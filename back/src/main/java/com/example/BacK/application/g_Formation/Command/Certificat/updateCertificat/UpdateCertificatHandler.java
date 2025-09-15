@@ -6,7 +6,7 @@ import com.example.BacK.infrastructure.services.g_Formation.CertificatRepository
 import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-import com.example.MESBack.application.mediator.RequestHandler;
+import com.example.Back.application.mediator.RequestHandler;
 
 
 @Component("UpdateCertificatHandler")

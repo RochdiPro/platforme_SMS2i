@@ -1,4 +1,4 @@
-package com.example.BacK.application.interfaces.g_Formation.formationLite;
+package com.example.BacK.application.interfaces.g_Formation.FormationLite;
 
 
 import com.example.BacK.application.g_Formation.Command.formationLite.updateFormationLite.UpdateFormationLiteValidator;

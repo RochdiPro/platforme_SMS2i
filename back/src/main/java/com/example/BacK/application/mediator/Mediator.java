@@ -1,6 +1,6 @@
 package com.example.BacK.application.mediator;
 
-import com.example.MESBack.application.mediator.RequestHandler;
+import com.example.Back.application.mediator.RequestHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
@@ -17,7 +17,7 @@ public class Mediator {
     private final Validator validator;
 
     @Autowired
-    private List<com.example.MESBack.application.mediator.RequestHandler<?, ?>> handlers;
+    private List<com.example.Back.application.mediator.RequestHandler<?, ?>> handlers;
 
     public Mediator(ApplicationContext context, Validator validator) {
         this.context = context;
@@ -37,10 +37,10 @@ public class Mediator {
 
         // 🔄 Étape 2 : Traiter les handlers normalement
         List<R> responses = new ArrayList<>();
-        for (com.example.MESBack.application.mediator.RequestHandler<?, ?> handler : handlers) {
+        for (com.example.Back.application.mediator.RequestHandler<?, ?> handler : handlers) {
             try {
                 @SuppressWarnings("unchecked")
-                com.example.MESBack.application.mediator.RequestHandler<C, R> typedHandler = (RequestHandler<C, R>) handler;
+                com.example.Back.application.mediator.RequestHandler<C, R> typedHandler = (RequestHandler<C, R>) handler;
                 R response = typedHandler.handle(command);
                 if (response != null) {
                     responses.add(response);

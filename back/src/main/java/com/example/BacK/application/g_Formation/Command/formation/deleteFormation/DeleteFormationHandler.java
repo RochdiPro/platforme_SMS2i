@@ -1,7 +1,7 @@
 package com.example.BacK.application.g_Formation.Command.formation.deleteFormation;
 
 import com.example.BacK.infrastructure.services.g_Formation.FormationRepositoryService;
-import com.example.MESBack.application.mediator.RequestHandler;
+import com.example.Back.application.mediator.RequestHandler;
 import org.springframework.stereotype.Component;
 
 @Component("DeleteFormationHandler")
