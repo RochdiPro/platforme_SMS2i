@@ -14,21 +14,19 @@ public class WebConfig implements WebMvcConfigurer {
         return new Interceptor();
     }
 
-    @SuppressWarnings("null")
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                // Origines autorisées : Angular dev + Capacitor
                 .allowedOrigins(
-                         
+                        "https://www.sms2i.com.tn",
                         "http://localhost:4200",
                         "http://192.168.1.43:4200",
                         "http://192.168.1.232",
                         "capacitor://localhost"
                 )
                 .allowedMethods("*")
-                .allowedHeaders("*");
-              //  .allowCredentials(true);
+                .allowedHeaders("*")
+                .allowCredentials(true);
     }
 
     @Override
