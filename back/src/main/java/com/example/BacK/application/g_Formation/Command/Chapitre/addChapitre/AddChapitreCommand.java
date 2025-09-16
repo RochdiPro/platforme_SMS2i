@@ -1,0 +1,25 @@
+package com.example.BacK.application.g_Formation.Command.Chapitre.addChapitre;
+
+import com.example.BacK.domain.g_Formation.Formation;
+import com.example.BacK.domain.g_Formation.Seance;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class AddChapitreCommand {
+
+    private Long id;
+    private String titre;
+    private String description;
+    private String objectif;
+    private String niveau;
+    private Formation formation;
+    private List<Seance> seances;
+
+
+}

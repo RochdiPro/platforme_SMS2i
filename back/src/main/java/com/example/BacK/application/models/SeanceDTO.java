@@ -1,6 +1,6 @@
 package com.example.BacK.application.models;
 
-import com.example.BacK.domain.g_Formation.Certificat;
+import com.example.BacK.domain.g_Formation.Chapitre;
 import com.example.BacK.domain.g_Formation.Contenu;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,21 +10,20 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-
-public class FormationLiteDTO {
+@NoArgsConstructor
+public class SeanceDTO {
 
     private Long id;
     private String titre;
-    private Date dateDemande;
-    private Date dateAffectation;
-    private String objectif;
-    private String domaine;
-    private String type;
-    private Double prix;
-    private Integer nombreMaximal;
+    private Date dateDebut;
+    private Date dateFin;
+    private String equipementPedagogique;
+    private String nature;
+    private String lieu;
     private String description;
+    private String niveau;
+    private ChapitreDTO chapitre;
     private List<ContenuDTO> contenus;
 
 }

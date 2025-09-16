@@ -21,6 +21,6 @@ public class EvaluationDTO {
     private Double score;
     private UserFormationDTO userFormation;
     private CertificatDTO certificat;
-    private Contenu contenu;
+    private ContenuDTO contenu;
 
 }

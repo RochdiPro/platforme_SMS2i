@@ -4,7 +4,6 @@ import com.example.BacK.application.g_Formation.Command.Certificat.addCertificat
 import com.example.BacK.application.g_Formation.Command.Certificat.deleteCertificat.DeleteCertificatCommand;
 import com.example.BacK.application.g_Formation.Command.Certificat.updateCertificat.UpdateCertificatCommand;
 import com.example.BacK.application.g_Formation.Query.Certificat.GetCertificatQuery;
-import com.example.BacK.application.g_Formation.Query.formation.GetFormationQuery;
 import com.example.BacK.application.mediator.Mediator;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

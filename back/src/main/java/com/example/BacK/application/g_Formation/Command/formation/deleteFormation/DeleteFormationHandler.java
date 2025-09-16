@@ -5,7 +5,6 @@ import com.example.Back.application.mediator.RequestHandler;
 import org.springframework.stereotype.Component;
 
 @Component("DeleteFormationHandler")
-
 public class DeleteFormationHandler implements RequestHandler <DeleteFormationCommand, Void> {
 
     private final FormationRepositoryService formationRepositoryService ;
