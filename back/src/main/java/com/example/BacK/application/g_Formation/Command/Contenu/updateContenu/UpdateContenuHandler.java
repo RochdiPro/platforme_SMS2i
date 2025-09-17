@@ -1,14 +1,14 @@
 package com.example.BacK.application.g_Formation.Command.Contenu.updateContenu;
 
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Formation.Contenu;
 import com.example.BacK.infrastructure.services.g_Formation.ContenuRepositoryService;
-import com.example.Back.application.mediator.RequestHandler;
 import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 @Component("UpdateContenuHandler")
-public class UpdateContenuHandler implements  RequestHandler <UpdateContenuCommand, Void>   {
+public class UpdateContenuHandler implements RequestHandler<UpdateContenuCommand, Void> {
 
     private final ContenuRepositoryService contenuRepositoryService ;
     private final ModelMapper modelMapper;

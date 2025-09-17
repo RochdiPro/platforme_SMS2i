@@ -1,12 +1,12 @@
 package com.example.BacK.application.g_Formation.Command.Chapitre.deleteChapitre;
 
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.infrastructure.services.g_Formation.ChapitreRepositoryService;
 import org.springframework.stereotype.Component;
-import com.example.Back.application.mediator.RequestHandler;
 
 
 @Component("DeleteChapitreHandler")
-public class DeleteChapitreHandler implements RequestHandler <DeleteChapitreCommand, Void> {
+public class DeleteChapitreHandler implements RequestHandler<DeleteChapitreCommand, Void> {
 
     private final ChapitreRepositoryService chapitreRepositoryService;
 

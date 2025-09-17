@@ -1,10 +1,10 @@
 package com.example.BacK.application.g_Formation.Query.Seance;
 
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Formation.Seance;
 import com.example.BacK.infrastructure.services.g_Formation.SeanceRepositoryService;
 import org.modelmapper.ModelMapper;
-import com.example.Back.application.mediator.RequestHandler;
-import org.springframework.stereotype.Component;
+ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;

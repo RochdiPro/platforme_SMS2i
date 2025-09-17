@@ -1,16 +1,16 @@
 package com.example.BacK.application.g_Formation.Query.formationLite;
 
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Formation.FormationLite;
 import com.example.BacK.infrastructure.services.g_Formation.FormationLiteRepositoryService;
-import com.example.Back.application.mediator.RequestHandler;
-import org.modelmapper.ModelMapper;
+ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
-public class GetFormationLiteHandler implements RequestHandler <GetFormationLiteQuery, List<GetFormationLiteResponse>> {
+@Component("GetFormationLiteHandler")
+public class GetFormationLiteHandler implements RequestHandler<GetFormationLiteQuery, List<GetFormationLiteResponse>> {
 
     private final FormationLiteRepositoryService formationRepositoryService;
     private final ModelMapper modelMapper;

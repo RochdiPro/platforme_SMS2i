@@ -1,14 +1,14 @@
 package com.example.BacK.application.g_Formation.Command.Seance.updateSeance;
 
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Formation.Seance;
 import com.example.BacK.infrastructure.services.g_Formation.SeanceRepositoryService;
-import com.example.Back.application.mediator.RequestHandler;
-import jakarta.persistence.EntityNotFoundException;
+ import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 @Component("UpdateSeanceHandler")
-public class UpdateSeanceHandler implements RequestHandler  <UpdateSeanceCommand, Void> {
+public class UpdateSeanceHandler implements RequestHandler<UpdateSeanceCommand, Void> {
 
     private final SeanceRepositoryService seanceRepositoryService;
     private final ModelMapper modelMapper;

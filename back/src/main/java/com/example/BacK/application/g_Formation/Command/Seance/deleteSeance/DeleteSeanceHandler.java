@@ -1,11 +1,11 @@
 package com.example.BacK.application.g_Formation.Command.Seance.deleteSeance;
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.infrastructure.services.g_Formation.SeanceRepositoryService;
-import com.example.Back.application.mediator.RequestHandler;
-import org.springframework.stereotype.Component;
+ import org.springframework.stereotype.Component;
 
 
 @Component("DeleteSeanceHandler")
-public class DeleteSeanceHandler implements RequestHandler <DeleteSeanceCommand, Void> {
+public class DeleteSeanceHandler implements RequestHandler<DeleteSeanceCommand, Void> {
 
     private final SeanceRepositoryService seanceRepositoryService ;
 

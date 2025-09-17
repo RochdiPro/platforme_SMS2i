@@ -1,14 +1,14 @@
 package com.example.BacK.application.g_Formation.Command.UserFormation.deleteUserFormation;
 
 
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.infrastructure.services.g_Formation.UserFormationRepositoryService;
 import org.springframework.stereotype.Component;
-import com.example.Back.application.mediator.RequestHandler;
 
 
 @Component("DeleteUserFormationHandler")
 
-public class DeleteUserFormationHandler implements RequestHandler <DeleteUserFormationCommand, Void> {
+public class DeleteUserFormationHandler implements RequestHandler<DeleteUserFormationCommand, Void> {
 
 
     private final UserFormationRepositoryService userFormationRepositoryService ;

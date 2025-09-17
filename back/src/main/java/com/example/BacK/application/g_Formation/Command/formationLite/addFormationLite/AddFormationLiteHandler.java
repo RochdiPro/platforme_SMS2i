@@ -1,9 +1,9 @@
 package com.example.BacK.application.g_Formation.Command.formationLite.addFormationLite;
 
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Formation.FormationLite;
 import com.example.BacK.infrastructure.services.g_Formation.FormationLiteRepositoryService;
-import com.example.Back.application.mediator.RequestHandler;
-import org.modelmapper.ModelMapper;
+ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 @Component("AddFormationLiteHandler")

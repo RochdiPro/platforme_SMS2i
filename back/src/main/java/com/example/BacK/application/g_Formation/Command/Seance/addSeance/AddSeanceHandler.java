@@ -1,11 +1,11 @@
 package com.example.BacK.application.g_Formation.Command.Seance.addSeance;
 
 
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Formation.Seance;
 import com.example.BacK.infrastructure.services.g_Formation.SeanceRepositoryService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-import com.example.Back.application.mediator.RequestHandler;
 
 
 @Component("AddSeanceHandler")

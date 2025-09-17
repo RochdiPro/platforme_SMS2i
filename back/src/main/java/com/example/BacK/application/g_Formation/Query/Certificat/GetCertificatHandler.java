@@ -1,8 +1,8 @@
 package com.example.BacK.application.g_Formation.Query.Certificat;
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Formation.Certificat;
 import com.example.BacK.infrastructure.services.g_Formation.CertificatRepositoryService;
-import com.example.Back.application.mediator.RequestHandler;
-import org.modelmapper.ModelMapper;
+ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 
 @Component
-public class GetCertificatHandler implements RequestHandler<GetCertificatQuery, List<GetCertificatResponse>>  {
+public class GetCertificatHandler implements RequestHandler<GetCertificatQuery, List<GetCertificatResponse>> {
 
     private final CertificatRepositoryService certificatRepositoryService;
     private final ModelMapper modelMapper;

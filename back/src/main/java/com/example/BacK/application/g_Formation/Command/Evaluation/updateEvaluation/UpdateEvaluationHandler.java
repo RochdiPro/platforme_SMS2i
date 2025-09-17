@@ -1,18 +1,16 @@
 package com.example.BacK.application.g_Formation.Command.Evaluation.updateEvaluation;
 
 
-import com.example.BacK.application.g_Formation.Command.Certificat.updateCertificat.UpdateCertificatCommand;
-import com.example.BacK.domain.g_Formation.Certificat;
+
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Formation.Evaluation;
-import com.example.BacK.infrastructure.services.g_Formation.CertificatRepositoryService;
-import com.example.BacK.infrastructure.services.g_Formation.EvaluationRepositoryService;
+ import com.example.BacK.infrastructure.services.g_Formation.EvaluationRepositoryService;
 import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-import com.example.Back.application.mediator.RequestHandler;
 
 @Component("UpdateEvaluationHandler")
-public class UpdateEvaluationHandler implements RequestHandler <UpdateEvaluationCommand, Void> {
+public class UpdateEvaluationHandler implements RequestHandler<UpdateEvaluationCommand, Void> {
 
     private final EvaluationRepositoryService evaluationRepositoryService;
     private final ModelMapper modelMapper;

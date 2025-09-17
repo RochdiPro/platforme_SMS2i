@@ -1,16 +1,16 @@
 package com.example.BacK.application.g_Formation.Query.Chapitre;
 
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Formation.Chapitre;
 import com.example.BacK.infrastructure.services.g_Formation.ChapitreRepositoryService;
-import com.example.Back.application.mediator.RequestHandler;
-import org.modelmapper.ModelMapper;
+ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;
 
 
 @Component
-public class GetChapitreHandler implements RequestHandler <GetChapitreQuery, List<GetChapitreResponse>>  {
+public class GetChapitreHandler implements RequestHandler<GetChapitreQuery, List<GetChapitreResponse>> {
 
 private final ChapitreRepositoryService chapitreRepositoryService;
 private final ModelMapper modelMapper;

@@ -15,9 +15,11 @@ public class WebConfig implements WebMvcConfigurer {
     public Interceptor Interceptor() {
         return new Interceptor();
     }
-
- 
-    @Override
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins(

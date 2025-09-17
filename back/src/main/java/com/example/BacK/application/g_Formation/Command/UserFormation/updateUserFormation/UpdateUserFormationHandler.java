@@ -1,16 +1,16 @@
 package com.example.BacK.application.g_Formation.Command.UserFormation.updateUserFormation;
 
 
+import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Formation.UserFormation;
 import com.example.BacK.infrastructure.services.g_Formation.UserFormationRepositoryService;
 import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-import com.example.Back.application.mediator.RequestHandler;
 
 
 @Component("UpdateUserFormationHandler")
-public class UpdateUserFormationHandler  implements RequestHandler  <UpdateUserFormationCommand, Void>{
+public class UpdateUserFormationHandler  implements RequestHandler<UpdateUserFormationCommand, Void> {
 
     private final UserFormationRepositoryService userFormationRepositoryService;
     private final ModelMapper modelMapper;
