@@ -1,7 +1,6 @@
 package com.example.BacK.application.g_Vehicule.Command.TransactionCarburant.updateTransaction;
 
-import com.example.BacK.domain.g_Vehicule.CarteGazoil;
-import com.example.BacK.domain.g_Vehicule.TypeCarburant;
+import com.example.BacK.domain.g_Vehicule.enumEntity.TypeCarburant;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,15 +11,17 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class UpdateTransactionCarburantCommand {
     private String id;
-    private String carteId;
     private LocalDate date;
     private String station;
     private String adresseStation;
-    private Double quantite;    // litres
+    private Double quantite;
     private Double prixLitre;
     private Double montantTotal;
     private Double kilometrage;
     private TypeCarburant typeCarburant;
     private String conducteur;
-    private CarteGazoil carte;
+    private String vehiculeId;
+    private String carteId;
+    private double consommation;
+
 }

@@ -8,10 +8,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>MESBack</artifactId>
+	<artifactId>Back</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MESBack</name>
-	<description>MES back project</description>
+	<name>Back</name>
+	<description>back project</description>
 	<url/>
 
 	<licenses>

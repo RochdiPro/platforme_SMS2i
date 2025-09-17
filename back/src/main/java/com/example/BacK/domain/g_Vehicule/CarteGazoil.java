@@ -1,18 +1,19 @@
 package com.example.BacK.domain.g_Vehicule;
 
 import com.example.BacK.domain.Auditable;
+import com.example.BacK.domain.g_Vehicule.enumEntity.FournisseurCarburant;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class CarteGazoil extends Auditable {
 
     @Id
@@ -21,16 +22,9 @@ public class CarteGazoil extends Auditable {
     private String id;
 
     private String numero;
-    private String vehiculeId;
-    private String vehiculeSerie;
-    private String vehiculeMarque;
     private LocalDate dateEmission;
-    private LocalDate dateExpiration;
-    private Double plafondMensuel;
-    private Double consommationMensuelle;
-
-    @Enumerated(EnumType.STRING)
-    private StatutCarte statut;
+    private Double solde;
+    private Double consomation ;
 
     @Enumerated(EnumType.STRING)
     private FournisseurCarburant fournisseur;

@@ -2,6 +2,7 @@ package com.example.BacK.infrastructure.services.g_Vehicule;
 
 import com.example.BacK.application.g_Vehicule.Query.CarteGazoil.GetCarteGazoilResponse;
 import com.example.BacK.application.interfaces.g_Vehicule.carteGazole.ICarteGazoilRepositoryService;
+import com.example.BacK.application.models.TransactionCarburantDTO;
 import com.example.BacK.domain.g_Vehicule.CarteGazoil;
 import com.example.BacK.infrastructure.repository.g_Vehicule.CarteGazoleRepository;
 import org.modelmapper.ModelMapper;
@@ -17,13 +18,14 @@ public class CarteGazoilRepositoryService implements ICarteGazoilRepositoryServi
     private final ModelMapper mapper;
     private final CarteGazoleRepository _carteGazoleRepository ;
 
-    public CarteGazoilRepositoryService(ModelMapper mapper, CarteGazoleRepository repo) {
+    public CarteGazoilRepositoryService(ModelMapper mapper, CarteGazoleRepository _carteGazoleRepository) {
         this.mapper = mapper;
-        this._carteGazoleRepository = repo;
+        this._carteGazoleRepository = _carteGazoleRepository;
     }
 
     @Override
     public String add(CarteGazoil carte) {
+        carte.setId(null);
         _carteGazoleRepository.save(carte);
         return "ok";
     }
@@ -47,14 +49,31 @@ public class CarteGazoilRepositoryService implements ICarteGazoilRepositoryServi
     }
 
     @Override
-    public List<GetCarteGazoilResponse> filtre(CarteGazoil filter) {
-        ExampleMatcher matcher = ExampleMatcher.matching()
-                .withIgnoreNullValues()
-                .withIgnoreCase()
-                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING);
-        Example<CarteGazoil> example = Example.of(filter, matcher);
-        return _carteGazoleRepository.findAll(example).stream()
-                .map(c -> mapper.map(c, GetCarteGazoilResponse.class))
-                .collect(Collectors.toList());
+    public List<GetCarteGazoilResponse> getall( ) {
+        List<CarteGazoil> cartes = _carteGazoleRepository.findAll();
+
+        return cartes.stream().map(c -> {
+            GetCarteGazoilResponse dto = mapper.map(c, GetCarteGazoilResponse.class);
+
+            // Mapper les transactions
+            List<TransactionCarburantDTO> transactionDTOs = c.getTransactions().stream()
+                    .map(t -> {
+                        TransactionCarburantDTO tdto = mapper.map(t, TransactionCarburantDTO.class);
+                       // tdto.setCarteId(c.getId()); // juste l'id de la carte
+                        return tdto;
+                    }).toList();
+            dto.setTransactions(transactionDTOs);
+
+            return dto;
+        }).toList();
     }
+
+    @Override
+    public void mise_a_jourSolde(CarteGazoil carteGazoil, double montant) {
+        carteGazoil.setSolde(carteGazoil.getSolde() - montant);
+        carteGazoil.setConsomation(carteGazoil.getConsomation()+montant);
+        _carteGazoleRepository.save(carteGazoil);
+    }
+
+
 }

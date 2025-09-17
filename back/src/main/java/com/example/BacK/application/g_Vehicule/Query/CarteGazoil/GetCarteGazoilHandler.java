@@ -1,8 +1,8 @@
 package com.example.BacK.application.g_Vehicule.Query.CarteGazoil;
 
+ import com.example.BacK.application.mediator.RequestHandler;
  import com.example.BacK.domain.g_Vehicule.CarteGazoil;
-import com.example.Back.application.mediator.RequestHandler;
-import org.modelmapper.ModelMapper;
+ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -22,10 +22,7 @@ public class GetCarteGazoilHandler implements RequestHandler <GetCarteGazoilQuer
     @Override
     public List<GetCarteGazoilResponse> handle(GetCarteGazoilQuery query) {
         CarteGazoil filter = modelMapper.map(query, CarteGazoil.class);
+        return carteGazoilRepositoryService.getall( );
 
-        List<GetCarteGazoilResponse> results = carteGazoilRepositoryService.filtre(filter);
-        return results.stream()
-                .map(carte -> modelMapper.map(carte, GetCarteGazoilResponse.class))
-                .collect(Collectors.toList());
     }
 }

@@ -18,13 +18,13 @@ public class UpdateVehiculeCommand {
     private String id;
     private String serie;
     private String marque;
-    private String modele;
-    private LocalDate dateAchat;
-    private Double kmActuel;
-    private Double kmProchaineVidange;
-    private LocalDate dateProchaineVisite;
+    private LocalDate dateVisiteTechnique;
     private LocalDate dateAssurance;
-    private LocalDate dateExpirationTaxe;
-    private String description;
+    private LocalDate dateTaxe;
+    private Double prochainVidangeKm;
+    private Double kmActuel ;
+    private Double prochaineChaineKm ;
+    private double consommation100km ;
+    private LocalDate dateChangementBatterie;
     private List<ReparationDTO> reparations;
 }

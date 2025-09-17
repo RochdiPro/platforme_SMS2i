@@ -1,4 +1,6 @@
-package com.example.Back.application.mediator;
+ 
+package com.example.BacK.application.mediator;
+ 
 
 public interface RequestHandler<C, R> {
     R handle(C command)  ;
