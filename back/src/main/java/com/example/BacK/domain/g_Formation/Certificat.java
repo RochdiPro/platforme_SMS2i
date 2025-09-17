@@ -14,10 +14,15 @@ public class Certificat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String titre;
-
     private String description;
-
     private String niveau;
+
+    @OneToOne(mappedBy = "certificat")
+    private Formation formation;
+
+    @OneToOne(mappedBy = "certificat")
+    private Evaluation evaluation;
+
+
 }

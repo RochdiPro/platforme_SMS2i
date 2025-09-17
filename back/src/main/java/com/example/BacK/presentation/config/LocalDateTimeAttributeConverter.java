@@ -1,4 +1,4 @@
-package com.example.MESBack.presentation.config;
+package com.example.BacK.presentation.config;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;

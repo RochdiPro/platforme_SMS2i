@@ -1,4 +1,4 @@
-package com.example.MESBack.infrastructure.exceptions;
+package com.example.Back.infrastructure.exceptions;
 
 
 public class AutomateException extends RuntimeException {

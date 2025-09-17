@@ -1,4 +1,4 @@
-package com.example.MESBack.application.exceptions;
+package com.example.Back.application.exceptions;
 
 public class InvalidEntityRelationException extends RuntimeException {
     public InvalidEntityRelationException(String message) {

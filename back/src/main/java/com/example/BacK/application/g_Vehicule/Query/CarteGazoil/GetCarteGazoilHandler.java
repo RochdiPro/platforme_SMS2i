@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component("GetCarteGazoilHandler")
-public class GetCarteGazoilHandler implements RequestHandler<GetCarteGazoilQuery, List<GetCarteGazoilResponse>> {
+public class GetCarteGazoilHandler implements RequestHandler <GetCarteGazoilQuery, List<GetCarteGazoilResponse>> {
 
     private final com.example.BacK.application.interfaces.g_Vehicule.carteGazole.ICarteGazoilRepositoryService carteGazoilRepositoryService;
     private final ModelMapper modelMapper;

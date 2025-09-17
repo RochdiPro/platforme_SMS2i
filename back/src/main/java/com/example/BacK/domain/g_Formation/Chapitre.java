@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -18,4 +20,13 @@ public class Chapitre {
     private String description;
     private String objectif;
     private String niveau;
+
+    @ManyToOne
+    @JoinColumn(name = "formation_id")
+    private Formation formation;
+
+    @OneToMany(mappedBy = "chapitre" , cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Seance> seances;
+
+
 }
