@@ -1,13 +1,7 @@
 package com.example.BacK.application.g_Vehicule.Query.CarteGazoil;
 
 import com.example.BacK.application.models.TransactionCarburantDTO;
-import com.example.BacK.domain.g_Vehicule.FournisseurCarburant;
-import com.example.BacK.domain.g_Vehicule.StatutCarte;
-import com.example.BacK.domain.g_Vehicule.TransactionCarburant;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToMany;
+import com.example.BacK.domain.g_Vehicule.enumEntity.FournisseurCarburant;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

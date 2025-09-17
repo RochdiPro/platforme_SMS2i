@@ -1,7 +1,7 @@
 package com.example.BacK.application.models;
 
-import com.example.BacK.domain.g_Vehicule.FournisseurCarburant;
-import com.example.BacK.domain.g_Vehicule.StatutCarte;
+import com.example.BacK.domain.g_Vehicule.enumEntity.FournisseurCarburant;
+import com.example.BacK.domain.g_Vehicule.enumEntity.StatutCarte;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

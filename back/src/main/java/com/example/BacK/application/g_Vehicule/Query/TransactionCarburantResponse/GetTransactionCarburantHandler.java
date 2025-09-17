@@ -1,9 +1,8 @@
 package com.example.BacK.application.g_Vehicule.Query.TransactionCarburantResponse;
 
 import com.example.BacK.application.interfaces.g_Vehicule.transactionCarburant.ITransactionCarburantRepositoryService;
-import com.example.BacK.domain.g_Vehicule.TransactionCarburant;
-import com.example.MESBack.application.mediator.RequestHandler;
-import org.modelmapper.ModelMapper;
+import com.example.BacK.application.mediator.RequestHandler;
+  import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

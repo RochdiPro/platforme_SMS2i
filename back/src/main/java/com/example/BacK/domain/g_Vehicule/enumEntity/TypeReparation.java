@@ -1,4 +1,4 @@
-package com.example.BacK.domain.g_Vehicule;
+package com.example.BacK.domain.g_Vehicule.enumEntity;
 
 public enum TypeReparation {
     VIDANGE,

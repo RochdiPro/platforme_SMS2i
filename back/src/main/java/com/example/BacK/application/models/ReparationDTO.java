@@ -1,8 +1,6 @@
 package com.example.BacK.application.models;
 
-import com.example.BacK.domain.g_Vehicule.TypeReparation;
-import com.example.BacK.domain.g_Vehicule.Vehicule;
-import jakarta.persistence.*;
+import com.example.BacK.domain.g_Vehicule.enumEntity.TypeReparation;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

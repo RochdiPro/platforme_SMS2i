@@ -1,5 +1,6 @@
 package com.example.BacK.domain.g_Vehicule;
 import com.example.BacK.domain.Auditable;
+import com.example.BacK.domain.g_Vehicule.enumEntity.TypeCarburant;
 import jakarta.persistence.*;
 import lombok.*;
 
