@@ -1,20 +1,18 @@
 package com.example.BacK.domain.g_Vehicule;
 
-import com.example.BacK.domain.Auditable;
-import com.example.BacK.domain.g_Vehicule.enumEntity.FournisseurCarburant;
+import com.example.BacK.domain.g_Vehicule.enumEntity.FournisseurTelepeage;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
-
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class CarteGazoil extends Auditable {
+public class CarteTelepeage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -27,8 +25,8 @@ public class CarteGazoil extends Auditable {
     private Double consomation ;
 
     @Enumerated(EnumType.STRING)
-    private FournisseurCarburant fournisseur;
+    private FournisseurTelepeage fournisseur;
 
     @OneToMany(mappedBy = "carte", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<TransactionCarburant> transactions;
+    private List<TelepeageTransaction> transactions;
 }

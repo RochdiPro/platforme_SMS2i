@@ -1,7 +1,6 @@
 package com.example.BacK.application.g_Vehicule.Command.TransactionCarburant.updateTransaction;
 
-import com.example.BacK.domain.g_Vehicule.CarteGazoil;
-import com.example.BacK.domain.g_Vehicule.TypeCarburant;
+import com.example.BacK.domain.g_Vehicule.enumEntity.TypeCarburant;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
