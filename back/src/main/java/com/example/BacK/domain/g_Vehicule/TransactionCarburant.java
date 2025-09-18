@@ -26,7 +26,8 @@ public class TransactionCarburant extends Auditable {
     private Double montantTotal;
     private Double kilometrage;
     private double consommation;
-
+    private String carteTelepeageId;
+    private Double montantTelepeage;
 
     @Enumerated(EnumType.STRING)
     private TypeCarburant typeCarburant;

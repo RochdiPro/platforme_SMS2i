@@ -12,4 +12,5 @@ public interface ICarteGazoilRepositoryService {
     CarteGazoil get(String id);
     List<GetCarteGazoilResponse> getall( );
     void mise_a_jourSolde(CarteGazoil carteGazoil , double montant);
+    void resete_a_jourSolde(CarteGazoil carteGazoil , double montant);
 }

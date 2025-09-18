@@ -5,5 +5,5 @@ public enum FournisseurCarburant {
     TOTAL,
     SHELL,
     ESSO,
-    AUTRE
+    ESPACE
 }

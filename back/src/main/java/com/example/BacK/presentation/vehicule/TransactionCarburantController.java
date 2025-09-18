@@ -1,10 +1,10 @@
 package com.example.BacK.presentation.vehicule;
 
 
-import com.example.BacK.application.g_Vehicule.Command.TransactionCarburant.addTransaction.AddTransactionCarburantCommand;
-import com.example.BacK.application.g_Vehicule.Command.TransactionCarburant.addTransaction.AddTransactionCarubrantResponse;
-import com.example.BacK.application.g_Vehicule.Command.TransactionCarburant.deleteTransaction.DeleteTransactionCarburantCommand;
-import com.example.BacK.application.g_Vehicule.Command.TransactionCarburant.updateTransaction.UpdateTransactionCarburantCommand;
+import com.example.BacK.application.g_Vehicule.Command.transactionCarburant.addTransaction.AddTransactionCarburantCommand;
+import com.example.BacK.application.g_Vehicule.Command.transactionCarburant.addTransaction.AddTransactionCarubrantResponse;
+import com.example.BacK.application.g_Vehicule.Command.transactionCarburant.deleteTransaction.DeleteTransactionCarburantCommand;
+import com.example.BacK.application.g_Vehicule.Command.transactionCarburant.updateTransaction.UpdateTransactionCarburantCommand;
 import com.example.BacK.application.g_Vehicule.Query.TransactionCarburantResponse.GetTransactionCarburantQuery;
 import com.example.BacK.application.mediator.Mediator;
 

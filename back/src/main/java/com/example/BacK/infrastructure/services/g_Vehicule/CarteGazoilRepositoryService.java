@@ -2,16 +2,12 @@ package com.example.BacK.infrastructure.services.g_Vehicule;
 
 import com.example.BacK.application.g_Vehicule.Query.CarteGazoil.GetCarteGazoilResponse;
 import com.example.BacK.application.interfaces.g_Vehicule.carteGazole.ICarteGazoilRepositoryService;
-import com.example.BacK.application.models.TransactionCarburantDTO;
+import com.example.BacK.application.models.g_vehicule.TransactionCarburantDTO;
 import com.example.BacK.domain.g_Vehicule.CarteGazoil;
 import com.example.BacK.infrastructure.repository.g_Vehicule.CarteGazoleRepository;
 import org.modelmapper.ModelMapper;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class CarteGazoilRepositoryService implements ICarteGazoilRepositoryService {
@@ -72,6 +68,13 @@ public class CarteGazoilRepositoryService implements ICarteGazoilRepositoryServi
     public void mise_a_jourSolde(CarteGazoil carteGazoil, double montant) {
         carteGazoil.setSolde(carteGazoil.getSolde() - montant);
         carteGazoil.setConsomation(carteGazoil.getConsomation()+montant);
+        _carteGazoleRepository.save(carteGazoil);
+    }
+
+    @Override
+    public void resete_a_jourSolde(CarteGazoil carteGazoil, double montant) {
+        carteGazoil.setSolde(carteGazoil.getSolde() + montant);
+        carteGazoil.setConsomation(carteGazoil.getConsomation()-montant);
         _carteGazoleRepository.save(carteGazoil);
     }
 
