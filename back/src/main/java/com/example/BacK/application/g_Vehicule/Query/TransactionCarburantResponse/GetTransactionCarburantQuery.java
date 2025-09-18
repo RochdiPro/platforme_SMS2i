@@ -18,12 +18,14 @@ public class GetTransactionCarburantQuery {
     private String vehiculeId;
     private String vehiculeSerie;
     private String vehiculeMarque;
-
     private Double plafondMensuel;
     private Double consommationMensuelle;
     private StatutCarte statut;
     private FournisseurCarburant fournisseur;
     private List<TransactionCarburant> transactions;
     private double consommation;
+    private String carteTelepeageId;
+    private Double montantTelepeage;
+    private Double kilometrage;
 
 }

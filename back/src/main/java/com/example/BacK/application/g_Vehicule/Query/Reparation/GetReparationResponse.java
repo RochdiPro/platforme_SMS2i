@@ -1,6 +1,6 @@
 package com.example.BacK.application.g_Vehicule.Query.Reparation;
 
-import com.example.BacK.application.models.VehiculeDTO;
+import com.example.BacK.application.models.g_vehicule.VehiculeDTO;
 import com.example.BacK.domain.g_Vehicule.enumEntity.TypeReparation;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,11 +1,7 @@
 package com.example.BacK.application.g_Vehicule.Query.vehicule;
 
-import com.example.BacK.application.g_Vehicule.Query.Reparation.GetReparationResponse;
-import com.example.BacK.application.models.ReparationDTO;
-import com.example.BacK.application.models.TransactionCarburantDTO;
-import com.example.BacK.domain.g_Vehicule.Reparation;
-import com.example.BacK.domain.g_Vehicule.TransactionCarburant;
-import jakarta.persistence.*;
+import com.example.BacK.application.models.g_vehicule.ReparationDTO;
+import com.example.BacK.application.models.g_vehicule.TransactionCarburantDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

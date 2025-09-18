@@ -1,6 +1,5 @@
 package com.example.BacK.application.interfaces.g_Vehicule.transactionCarburant;
-import com.example.BacK.application.g_Vehicule.Command.TransactionCarburant.updateTransaction.UpdateTransactionCarburantValidator;
-import com.example.BacK.application.g_Vehicule.Command.vehicule.addVehicule.AddVehiculeValidator;
+import com.example.BacK.application.g_Vehicule.Command.transactionCarburant.updateTransaction.UpdateTransactionCarburantValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 

@@ -2,8 +2,8 @@ package com.example.BacK.infrastructure.services.g_Vehicule;
 
 import com.example.BacK.application.g_Vehicule.Query.vehicule.GetVehiculeResponse;
 import com.example.BacK.application.interfaces.g_Vehicule.vehicule.IVehiculeRepositoryService;
-import com.example.BacK.application.models.ReparationDTO;
-import com.example.BacK.application.models.TransactionCarburantDTO;
+import com.example.BacK.application.models.g_vehicule.ReparationDTO;
+import com.example.BacK.application.models.g_vehicule.TransactionCarburantDTO;
 import com.example.BacK.domain.g_Vehicule.Vehicule;
 import com.example.BacK.infrastructure.repository.g_Vehicule.VehiculeRepository;
 import org.modelmapper.ModelMapper;

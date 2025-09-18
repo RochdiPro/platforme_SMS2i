@@ -1,23 +1,33 @@
 package com.example.BacK.domain.g_RH;
 
 import com.example.BacK.domain.g_RH.enumEntity.StatutFichePaie;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDate;
-
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class FichePaie {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(length = 36)
     private String id;
-    private String employeeId;
-    private int mois;
-    private int annee;
-    private double salaireBase;
-    private double heuresSupplementaires;
+
+    private LocalDate dateEmission;
+    private double salaireDeBase;
     private double primes;
-    private double avantages;
     private double retenues;
-    private double cotisationsCnss;
-    private double impots;
-    private double salaireBrut;
-    private double salaireNet;
-    private LocalDate dateCreation;
+    private double netAPayer;
+
+    @Enumerated(EnumType.STRING)
     private StatutFichePaie statut;
+
+    @ManyToOne
+    @JoinColumn(name = "employee_id", nullable = false)
+    private Employee employee;
 }

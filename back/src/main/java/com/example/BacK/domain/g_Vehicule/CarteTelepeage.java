@@ -27,6 +27,5 @@ public class CarteTelepeage {
     @Enumerated(EnumType.STRING)
     private FournisseurTelepeage fournisseur;
 
-    @OneToMany(mappedBy = "carte", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<TelepeageTransaction> transactions;
+
 }

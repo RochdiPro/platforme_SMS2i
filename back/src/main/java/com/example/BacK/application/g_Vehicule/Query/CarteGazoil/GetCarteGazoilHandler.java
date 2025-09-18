@@ -6,7 +6,6 @@ package com.example.BacK.application.g_Vehicule.Query.CarteGazoil;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component("GetCarteGazoilHandler")
 public class GetCarteGazoilHandler implements RequestHandler <GetCarteGazoilQuery, List<GetCarteGazoilResponse>> {

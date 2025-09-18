@@ -1,7 +1,7 @@
 package com.example.BacK.application.g_Vehicule.Query.TransactionCarburantResponse;
 
-import com.example.BacK.application.models.CarteGazoilDTO;
-import com.example.BacK.application.models.VehiculeDTO;
+import com.example.BacK.application.models.g_vehicule.CarteGazoilDTO;
+import com.example.BacK.application.models.g_vehicule.VehiculeDTO;
 import com.example.BacK.domain.g_Vehicule.enumEntity.TypeCarburant;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,15 +16,15 @@ public class GetTransactionCarburantResponse {
     private String id ;
     private LocalDate date;
     private String station;
-    private String adresseStation;
     private Double quantite;
     private Double prixLitre;
     private Double montantTotal;
-    private Double kilometrage;
-    private TypeCarburant typeCarburant;
+     private TypeCarburant typeCarburant;
     private String conducteur;
     private CarteGazoilDTO carte;
     private VehiculeDTO vehicule;
     private double consommation;
-
+    private String carteTelepeageId;
+    private Double montantTelepeage;
+    private Double kilometrage;
 }
