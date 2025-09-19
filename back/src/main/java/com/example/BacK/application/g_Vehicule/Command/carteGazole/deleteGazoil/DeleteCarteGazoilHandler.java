@@ -1,6 +1,6 @@
 package com.example.BacK.application.g_Vehicule.Command.carteGazole.deleteGazoil;
 
- import com.example.BacK.application.interfaces.g_Vehicule.carteGazole.ICarteGazoilRepositoryService;
+  import com.example.BacK.application.interfaces.g_Vehicule.carteGazole.ICarteGazoilRepositoryService;
  import com.example.BacK.application.mediator.RequestHandler;
  import org.springframework.stereotype.Component;
 
@@ -8,7 +8,7 @@ package com.example.BacK.application.g_Vehicule.Command.carteGazole.deleteGazoil
 @Component("DeleteCarteGazoilHandler")
 public class DeleteCarteGazoilHandler implements RequestHandler<DeleteCarteGazoilCommand, Void> {
 
-    private final com.example.BacK.application.interfaces.g_Vehicule.carteGazole.ICarteGazoilRepositoryService carteGazoilRepositoryService;
+    private final ICarteGazoilRepositoryService carteGazoilRepositoryService;
 
     public DeleteCarteGazoilHandler(ICarteGazoilRepositoryService carteGazoilRepositoryService) {
         this.carteGazoilRepositoryService = carteGazoilRepositoryService;
