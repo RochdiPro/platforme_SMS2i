@@ -45,9 +45,8 @@ public class FormationLiteRepositoryService implements IFormationLiteRepositoryS
         return formationLiteRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("FormationLite avec ID " + id + " introuvable ❌"));
     }
-
     @Override
     public List<FormationLite> getAll() {
-        return formationLiteRepository.findAll();
+        return formationLiteRepository.findAllWithContenus();
     }
 }

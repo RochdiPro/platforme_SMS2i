@@ -16,6 +16,5 @@ public class ContenuDTO {
     private String type;
     private SeanceDTO seance;
     private FormationLiteDTO formationLite;
-    private EvaluationDTO evaluation;
 
 }

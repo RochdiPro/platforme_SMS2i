@@ -1,5 +1,6 @@
 package com.example.BacK.application.g_Formation.Command.UserFormation.updateUserFormation;
 
+import com.example.BacK.application.models.FormationDTO;
 import com.example.BacK.domain.g_Formation.Formation;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +22,6 @@ public class UpdateUserFormationCommand {
     private String description;
     private String niveauActuel;
     private String pieceIdentite;
-    private Formation formation;
+    private FormationDTO formation;
 
 }

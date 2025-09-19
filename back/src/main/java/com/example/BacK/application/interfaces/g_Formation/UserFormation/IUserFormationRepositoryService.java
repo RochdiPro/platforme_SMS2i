@@ -9,7 +9,7 @@ public interface IUserFormationRepositoryService {
     UserFormation add(UserFormation userFormation);
     void update(UserFormation userFormation);
     void delete(Long id);
-    UserFormation get(Long id);
+    UserFormation getByid(Long id);
     List<UserFormation> getAll();
 
 }

@@ -1,8 +1,8 @@
 package com.example.BacK.application.g_Formation.Query.Contenu;
 
-import com.example.BacK.domain.g_Formation.Evaluation;
-import com.example.BacK.domain.g_Formation.FormationLite;
-import com.example.BacK.domain.g_Formation.Seance;
+import com.example.BacK.application.models.EvaluationDTO;
+import com.example.BacK.application.models.FormationLiteDTO;
+import com.example.BacK.application.models.SeanceDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,8 +17,7 @@ public class GetContenuQuery  {
     private String titre;
     private String description;
     private String type;
-    private Seance seance;
-    private FormationLite formationLite;
-    private Evaluation evaluation;
+    private SeanceDTO seance;
+    private FormationLiteDTO formationLite;
 
 }

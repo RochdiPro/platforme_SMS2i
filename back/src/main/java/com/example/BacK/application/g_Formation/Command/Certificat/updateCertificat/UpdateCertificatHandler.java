@@ -23,7 +23,7 @@ public class UpdateCertificatHandler implements RequestHandler<UpdateCertificatC
 
     @Override
     public Void handle(UpdateCertificatCommand command) {
-      Certificat existingEntity = this.certificatRepositoryService.get(command.getId());
+      Certificat existingEntity = this.certificatRepositoryService.getByid(command.getId());
         if (existingEntity == null) {
             throw new EntityNotFoundException("Entity Certificat not found");
         }

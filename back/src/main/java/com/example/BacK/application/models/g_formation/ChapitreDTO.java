@@ -17,6 +17,5 @@ public class ChapitreDTO {
     private String objectif;
     private String niveau;
     private FormationDTO formation;
-    private List<SeanceDTO> seances;
 
 }

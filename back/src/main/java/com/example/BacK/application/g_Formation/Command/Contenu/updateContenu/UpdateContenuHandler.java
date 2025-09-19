@@ -21,7 +21,7 @@ public class UpdateContenuHandler implements RequestHandler<UpdateContenuCommand
 
     @Override
     public Void handle(UpdateContenuCommand command) {
-        Contenu existingEntity = this.contenuRepositoryService.get(command.getId());
+        Contenu existingEntity = this.contenuRepositoryService.getByid(command.getId());
         if (existingEntity == null) {
             throw new EntityNotFoundException("Entity Contenu not found");
         }
