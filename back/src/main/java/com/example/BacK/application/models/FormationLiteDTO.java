@@ -25,6 +25,5 @@ public class FormationLiteDTO {
     private Double prix;
     private Integer nombreMaximal;
     private String description;
-    private List<ContenuDTO> contenus;
 
 }

@@ -1,5 +1,6 @@
 package com.example.BacK.domain.g_Formation;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,6 +30,7 @@ public class UserFormation {
 
     @ManyToOne
     @JoinColumn(name = "formation_id")
+    @JsonBackReference
     private Formation formation;
 
     @OneToMany(mappedBy = "userFormation" , cascade = CascadeType.ALL, orphanRemoval = true)

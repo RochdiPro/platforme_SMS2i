@@ -1,6 +1,6 @@
 package com.example.BacK.application.g_Formation.Query.formationLite;
 
-import com.example.BacK.domain.g_Formation.Contenu;
+import com.example.BacK.application.models.ContenuDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,6 +23,5 @@ public class GetFormationLiteResponse {
     private Double prix;
     private Integer nombreMaximal;
     private String description;
-    private List<Contenu> contenus;
 
 }

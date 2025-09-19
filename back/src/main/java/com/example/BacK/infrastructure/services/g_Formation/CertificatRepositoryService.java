@@ -42,7 +42,7 @@ public class CertificatRepositoryService implements ICertificatRepositoryService
     }
 
     @Override
-    public Certificat get(Long id) {
+    public Certificat getByid(Long id) {
         return certificatRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Certificat avec ID " + id + " introuvable ❌"));
     }

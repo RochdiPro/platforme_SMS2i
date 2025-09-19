@@ -1,6 +1,6 @@
 package com.example.BacK.application.g_Formation.Query.UserFormation;
 
-import com.example.BacK.domain.g_Formation.Formation;
+import com.example.BacK.application.models.FormationDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +21,6 @@ public class GetUserFormationResponse {
     private String description;
     private String niveauActuel;
     private String pieceIdentite;
-    private Formation formation;
+    private FormationDTO formation;
 
 }

@@ -1,7 +1,6 @@
 package com.example.BacK.application.g_Formation.Command.formationLite.addFormationLite;
 
-import com.example.BacK.domain.g_Formation.Contenu;
-import jakarta.persistence.OneToMany;
+import com.example.BacK.application.models.ContenuDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +23,6 @@ public class AddFormationLiteCommand {
     private Double prix;
     private Integer nombreMaximal;
     private String description;
-    private List<Contenu> contenus;
+    private List<ContenuDTO> contenus;
 
 }

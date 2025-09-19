@@ -39,7 +39,7 @@ public class ContenuRepositoryService implements IContenuRepositoryService {
     }
 
     @Override
-    public Contenu get(Long id) {
+    public Contenu getByid(Long id) {
         return contenuRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Contenu introuvable ❌"));
     }

@@ -1,6 +1,6 @@
 package com.example.BacK.application.g_Formation.Command.formation.updateFormation;
 
-import com.example.BacK.domain.g_Formation.Certificat;
+import com.example.BacK.application.models.CertificatDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,7 +24,7 @@ public class UpdateFormationCommand {
     private Integer nombreMaximal;
     private String description;
     private String niveau;
-    private Certificat certificat;
+    private CertificatDTO certificat;
 
 
 }

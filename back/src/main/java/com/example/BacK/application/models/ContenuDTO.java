@@ -1,8 +1,5 @@
 package com.example.BacK.application.models;
 
-import com.example.BacK.domain.g_Formation.Evaluation;
-import com.example.BacK.domain.g_Formation.FormationLite;
-import com.example.BacK.domain.g_Formation.Seance;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +16,5 @@ public class ContenuDTO {
     private String type;
     private SeanceDTO seance;
     private FormationLiteDTO formationLite;
-    private EvaluationDTO evaluation;
 
 }

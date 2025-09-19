@@ -1,5 +1,8 @@
 package com.example.BacK.application.g_Formation.Command.Evaluation.addEvaluation;
 
+import com.example.BacK.application.models.CertificatDTO;
+import com.example.BacK.application.models.ContenuDTO;
+import com.example.BacK.application.models.UserFormationDTO;
 import com.example.BacK.domain.g_Formation.Certificat;
 import com.example.BacK.domain.g_Formation.Contenu;
 import com.example.BacK.domain.g_Formation.UserFormation;
@@ -19,8 +22,8 @@ public class AddEvaluationCommand {
     private Date date;
     private String description;
     private Double score;
-    private UserFormation userFormation;
-    private Certificat certificat;
-    private Contenu contenu;
+    private UserFormationDTO userFormation;
+    private CertificatDTO certificat;
+    private ContenuDTO contenu;
 
 }

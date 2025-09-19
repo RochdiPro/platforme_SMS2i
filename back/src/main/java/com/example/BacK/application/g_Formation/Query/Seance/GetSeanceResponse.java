@@ -1,5 +1,7 @@
 package com.example.BacK.application.g_Formation.Query.Seance;
 
+import com.example.BacK.application.models.ChapitreDTO;
+import com.example.BacK.application.models.ContenuDTO;
 import com.example.BacK.domain.g_Formation.Chapitre;
 import com.example.BacK.domain.g_Formation.Contenu;
 import lombok.AllArgsConstructor;
@@ -22,8 +24,7 @@ public class GetSeanceResponse {
     private String lieu;
     private String description;
     private String niveau;
-    private Chapitre chapitre;
-    private List<Contenu> contenus;
+    private ChapitreDTO chapitre;
 
 
 }

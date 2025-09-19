@@ -9,7 +9,7 @@ public interface IContenuRepositoryService {
     String add(Contenu contenu);
     void update(Contenu contenu);
     void delete(Long id);
-    Contenu get(Long id);
+    Contenu getByid(Long id);
     List<Contenu> getAll();
 
 }

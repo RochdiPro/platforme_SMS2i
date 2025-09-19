@@ -1,13 +1,10 @@
 package com.example.BacK.application.models;
 
-import com.example.BacK.domain.g_Formation.Chapitre;
-import com.example.BacK.domain.g_Formation.Contenu;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -24,6 +21,5 @@ public class SeanceDTO {
     private String description;
     private String niveau;
     private ChapitreDTO chapitre;
-    private List<ContenuDTO> contenus;
 
 }

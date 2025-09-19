@@ -23,7 +23,7 @@ public class UpdateUserFormationHandler  implements RequestHandler<UpdateUserFor
 
     @Override
     public Void handle(UpdateUserFormationCommand command) {
-        UserFormation existingEntity = this.userFormationRepositoryService.get(command.getId());
+        UserFormation existingEntity = this.userFormationRepositoryService.getByid(command.getId());
         if (existingEntity == null) {
             throw new EntityNotFoundException("Entity User Formation not found");
         }

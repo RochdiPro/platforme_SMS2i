@@ -1,9 +1,9 @@
 package com.example.BacK.application.g_Formation.Query.Evaluation;
 
 
-import com.example.BacK.domain.g_Formation.Certificat;
-import com.example.BacK.domain.g_Formation.Contenu;
-import com.example.BacK.domain.g_Formation.UserFormation;
+import com.example.BacK.application.models.CertificatDTO;
+import com.example.BacK.application.models.ContenuDTO;
+import com.example.BacK.application.models.UserFormationDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,9 +19,9 @@ public class GetEvaluationResponse {
     private Date date;
     private String description;
     private Double score;
-    private UserFormation userFormation;
-    private Certificat certificat;
-    private Contenu contenu;
+    private UserFormationDTO userFormation;
+    private CertificatDTO certificat;
+    private ContenuDTO contenu;
 
 
 
