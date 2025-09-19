@@ -1,14 +1,12 @@
 package com.example.BacK.application.g_Vehicule.Command.transactionCarburant.deleteTransaction;
 
-import com.example.BacK.application.interfaces.g_Vehicule.carteGazole.ICarteGazoilRepositoryService;
-import com.example.BacK.application.interfaces.g_Vehicule.carteTelepeage.ICarteTelepeageRepositoryService;
+ import com.example.BacK.application.interfaces.g_Vehicule.carteTelepeage.ICarteTelepeageRepositoryService;
 import com.example.BacK.application.interfaces.g_Vehicule.transactionCarburant.ITransactionCarburantRepositoryService;
-import com.example.BacK.application.interfaces.g_Vehicule.vehicule.IVehiculeRepositoryService;
 import com.example.BacK.application.mediator.RequestHandler;
 import com.example.BacK.domain.g_Vehicule.CarteGazoil;
 import com.example.BacK.domain.g_Vehicule.CarteTelepeage;
 import com.example.BacK.domain.g_Vehicule.TransactionCarburant;
-import com.example.BacK.domain.g_Vehicule.Vehicule;
+import com.example.BacK.infrastructure.services.g_Vehicule.CarteGazoilRepositoryService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Component;
 
@@ -16,10 +14,10 @@ import org.springframework.stereotype.Component;
 public class DeleteTransactionCarburantHandler implements RequestHandler<DeleteTransactionCarburantCommand, Void> {
 
     private final ITransactionCarburantRepositoryService transactionCarburantRepositoryService;
-    private final ICarteGazoilRepositoryService carteGazoilRepositoryService;
+    private final CarteGazoilRepositoryService carteGazoilRepositoryService;
     private final ICarteTelepeageRepositoryService carteTelepeageRepositoryService;
 
-    public DeleteTransactionCarburantHandler(ITransactionCarburantRepositoryService transactionCarburantRepositoryService, ICarteGazoilRepositoryService carteGazoilRepositoryService, ICarteTelepeageRepositoryService carteTelepeageRepositoryService) {
+    public DeleteTransactionCarburantHandler(ITransactionCarburantRepositoryService transactionCarburantRepositoryService, CarteGazoilRepositoryService carteGazoilRepositoryService, ICarteTelepeageRepositoryService carteTelepeageRepositoryService) {
         this.transactionCarburantRepositoryService = transactionCarburantRepositoryService;
         this.carteGazoilRepositoryService = carteGazoilRepositoryService;
         this.carteTelepeageRepositoryService = carteTelepeageRepositoryService;
