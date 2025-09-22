@@ -1,5 +1,7 @@
 package com.example.BacK.domain.g_Formation;
 
+import com.example.BacK.domain.g_Formation.enumEntity.NiveauFormation;
+import com.example.BacK.domain.g_Formation.enumEntity.TypeFormation;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,10 +25,13 @@ public class FormationLite {
     private Date dateAffectation;
     private String objectif;
     private String domaine;
-    private String type;
     private Double prix;
     private Integer nombreMaximal;
     private String description;
+
+    @Enumerated(EnumType.STRING)
+    private TypeFormation type ;
+
 
     @OneToMany(mappedBy = "formationLite" , cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Contenu> contenus;
