@@ -13,7 +13,6 @@ import java.util.Date;
 public class FormationDTO {
 
     private Long id;
-    private String titre;
     private String objectif;
     private String domaine;
     private String type;

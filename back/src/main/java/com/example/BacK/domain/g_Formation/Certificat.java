@@ -1,5 +1,6 @@
 package com.example.BacK.domain.g_Formation;
 
+import com.example.BacK.domain.g_Formation.enumEntity.NiveauFormation;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,7 +17,10 @@ public class Certificat {
     private Long id;
     private String titre;
     private String description;
-    private String niveau;
+
+    @Enumerated(EnumType.STRING)
+    private NiveauFormation niveau;
+
 
     @OneToOne(mappedBy = "certificat")
     private Formation formation;

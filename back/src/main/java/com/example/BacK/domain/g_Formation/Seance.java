@@ -1,5 +1,6 @@
 package com.example.BacK.domain.g_Formation;
 
+import com.example.BacK.domain.g_Formation.enumEntity.NiveauFormation;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,7 +26,10 @@ public class Seance {
     private String nature;
     private String lieu;
     private String description;
-    private String niveau;
+
+    @Enumerated(EnumType.STRING)
+    private NiveauFormation niveau ;
+
 
     @ManyToOne
     @JoinColumn(name = "chapitre_id")

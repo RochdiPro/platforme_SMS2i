@@ -14,7 +14,6 @@ import java.util.Date;
 
 public class UpdateFormationCommand {
     private String id ;
-    private String titre;
     private String objectif;
     private String domaine;
     private String type;
