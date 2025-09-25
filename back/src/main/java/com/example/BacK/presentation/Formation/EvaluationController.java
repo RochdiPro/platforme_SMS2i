@@ -24,13 +24,13 @@ public class EvaluationController {
         this.mediator = mediator;
     }
 
-    @GetMapping("/allevaluation")
+    @GetMapping
     public ResponseEntity<List<Object>> getAllEvaluation() {
         return ResponseEntity.ok(mediator.sendToHandlers(new GetEvaluationQuery()));
     }
 
 
-    @PostMapping("/addevaluation")
+    @PostMapping
     public ResponseEntity<Object> addEvaluation(@Valid @RequestBody AddEvaluationCommand command) {
         Object result = mediator.sendToHandlers(command);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);

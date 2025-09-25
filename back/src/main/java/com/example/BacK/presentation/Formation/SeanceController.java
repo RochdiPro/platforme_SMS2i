@@ -23,13 +23,13 @@ public class SeanceController {
         this.mediator = mediator;
     }
 
-    @GetMapping("/allseance")
+    @GetMapping
     public ResponseEntity<List<Object>> getAllSeance() {
         return ResponseEntity.ok(mediator.sendToHandlers(new GetSeanceQuery()));
     }
 
 
-    @PostMapping("/addseance")
+    @PostMapping
     public ResponseEntity<Object> addSeance(@Valid @RequestBody AddSeanceCommand command) {
         Object result = mediator.sendToHandlers(command);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);

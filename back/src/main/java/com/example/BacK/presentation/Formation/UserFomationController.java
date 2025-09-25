@@ -6,6 +6,7 @@ import com.example.BacK.application.g_Formation.Command.UserFormation.deleteUser
 import com.example.BacK.application.g_Formation.Command.UserFormation.updateUserFormation.UpdateUserFormationCommand;
 import com.example.BacK.application.g_Formation.Query.UserFormation.GetUserFormationQuery;
 import com.example.BacK.application.mediator.Mediator;
+import com.example.BacK.domain.g_Formation.UserFormation;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,17 +26,19 @@ public class UserFomationController {
     }
 
 
-    @GetMapping("/alluser")
+    @GetMapping
     public ResponseEntity<List<Object>> getAllUserFomation() {
         return ResponseEntity.ok(mediator.sendToHandlers(new GetUserFormationQuery()));
     }
 
 
-    @PostMapping("/adduser")
+    @PostMapping
     public ResponseEntity<Object> lite(@Valid @RequestBody AddUserFormationCommand command) {
         Object result = mediator.sendToHandlers(command);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
+
+
 
     @PutMapping("/{id}")
     public ResponseEntity<Void> updateFormationlite(@PathVariable Long id,

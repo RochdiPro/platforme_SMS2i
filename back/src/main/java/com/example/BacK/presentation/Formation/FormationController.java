@@ -4,8 +4,10 @@ package com.example.BacK.presentation.Formation;
 import com.example.BacK.application.g_Formation.Command.formation.addFormation.AddFormationCommand;
 import com.example.BacK.application.g_Formation.Command.formation.deleteFormation.DeleteFormationCommand;
 import com.example.BacK.application.g_Formation.Command.formation.updateFormation.UpdateFormationCommand;
+import com.example.BacK.application.g_Formation.Query.formation.GetFormationByIdQuery;
 import com.example.BacK.application.g_Formation.Query.formation.GetFormationQuery;
 import com.example.BacK.application.mediator.Mediator;
+import com.example.BacK.domain.g_Formation.Formation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
@@ -24,13 +26,15 @@ public class FormationController {
         this.mediator = mediator;
     }
 
-    @GetMapping("/allformation")
-    public ResponseEntity<List<Object>> getAllFormations() {
+    @GetMapping
+    public ResponseEntity<List<Formation>> getAllFormations() {
         return ResponseEntity.ok(mediator.sendToHandlers(new GetFormationQuery()));
     }
 
 
-    @PostMapping("/addformation")
+
+
+    @PostMapping
     public ResponseEntity<Object> addFormation(@Valid @RequestBody AddFormationCommand command) {
         Object result = mediator.sendToHandlers(command);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);
@@ -43,6 +47,13 @@ public class FormationController {
         mediator.sendToHandlers(command);
         return ResponseEntity.accepted().build();
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Formation> getFormationById(@PathVariable Long id) {
+        Formation formation = (Formation) mediator.sendToHandlers(new GetFormationByIdQuery(id));
+        return ResponseEntity.ok(formation);
+    }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteFormation(@PathVariable Long id) {

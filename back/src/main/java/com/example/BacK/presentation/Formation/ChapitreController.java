@@ -22,13 +22,13 @@ public class ChapitreController {
         this.mediator = mediator;
     }
 
-    @GetMapping("/allchapitre")
+    @GetMapping
     public ResponseEntity<List<Object>> getAllChapitre() {
         return ResponseEntity.ok(mediator.sendToHandlers(new GetChapitreQuery()));
     }
 
 
-    @PostMapping("/addchapitre")
+    @PostMapping
     public ResponseEntity<Object> addChapitre(@Valid @RequestBody AddChapitreCommand command) {
         Object result = mediator.sendToHandlers(command);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);
