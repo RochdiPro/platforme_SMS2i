@@ -10,9 +10,7 @@ public class AddCongeeValidator implements ConstraintValidator<IAddCongeeCommand
         if (command == null) {
             return false;
         }
-        if (command.getEmployee () == null ) {
-            throw new IllegalArgumentException("Le Employee est obligatoire");
-        }
+
 
         return true;
     }

@@ -19,8 +19,5 @@ public class AddCongeeCommand {
     private int nombreJours;
     private String motif;
     private StatutConge statut;
-    private LocalDate dateCreation;
-    private LocalDate dateValidation;
-    private String validePar;
-    private Employee employee;
+    private String employeeId;
 }

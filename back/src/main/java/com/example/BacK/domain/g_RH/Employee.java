@@ -1,7 +1,10 @@
 package com.example.BacK.domain.g_RH;
 
+import com.example.BacK.domain.Auditable;
+import com.example.BacK.domain.g_Projet.Charge;
 import com.example.BacK.domain.g_RH.enumEntity.SituationFamiliale;
 import com.example.BacK.domain.g_RH.enumEntity.StatutEmployee;
+import com.example.BacK.domain.g_RH.enumEntity.TypePieceIdentite;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,48 +17,44 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Employee {
+public class Employee extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36)
     private String id;
-
-    @Column(unique = true, nullable = false)
-    private String matricule;
-
     private String nom;
     private String prenom;
-
-    @Column(unique = true, nullable = false)
     private String email;
-
     private String telephone;
     private String poste;
     private String departement;
     private LocalDate dateEmbauche;
     private double salaire;
-
-    @Enumerated(EnumType.STRING)
-    private StatutEmployee statut;
-
     private int soldeConges;
     private int congesUtilises;
-
+    private int soldePoints;
+    private int pointsDemandesParAn;
     private String adresse;
 
-    @Column(unique = true, nullable = false)
-    private String cin;
-
     @Enumerated(EnumType.STRING)
-    private SituationFamiliale situationFamiliale;
+    private TypePieceIdentite typePieceIdentite;
+
+    @Column(unique = true, nullable = false)
+    private String numeroPieceIdentite;
 
     private int nombreEnfants;
 
-    private LocalDate createdAt;
-    private LocalDate updatedAt;
-
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Congee> conges;
+
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Prime> primes;
+
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Retenue> retenues;
+
+    @OneToMany(mappedBy = "employe", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Charge> charges;
 }
 

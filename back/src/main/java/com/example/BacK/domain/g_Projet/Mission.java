@@ -41,6 +41,10 @@ public class Mission {
     @JoinColumn(name = "projet_id")
     private Projet projet;
 
+    @ManyToOne
+    @JoinColumn(name = "phase_id")
+    private Phase phase;
+
     @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
     private List<Tache> taches;
 

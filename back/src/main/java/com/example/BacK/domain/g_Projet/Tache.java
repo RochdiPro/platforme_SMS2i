@@ -1,6 +1,7 @@
 package com.example.BacK.domain.g_Projet;
 
 // Tache.java
+import com.example.BacK.domain.Auditable;
 import com.example.BacK.domain.g_Projet.enumEntity.PrioriteTache;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutTache;
 import jakarta.persistence.*;
@@ -14,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Tache {
+public class Tache extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -47,13 +48,15 @@ public class Tache {
     @OneToMany(mappedBy = "tache", cascade = CascadeType.ALL)
     private List<EmployeAffecte> employesAffectes;
 
+    @OneToMany(mappedBy = "tache", cascade = CascadeType.ALL)
+    private List<Charge> charges;
+
     @ElementCollection
     private List<String> dependances;
 
     @ElementCollection
     private List<String> fichiers;
 
-    private LocalDate createdAt;
-    private LocalDate updatedAt;
+
 }
 
