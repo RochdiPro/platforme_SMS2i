@@ -4,12 +4,14 @@ import com.example.BacK.domain.g_Formation.enumEntity.CategorieFormation;
 import com.example.BacK.domain.g_Formation.enumEntity.NiveauFormation;
 import com.example.BacK.domain.g_Formation.enumEntity.StatutFormation;
 import com.example.BacK.domain.g_Formation.enumEntity.TypeFormation;
-import com.example.BacK.domain.g_Vehicule.enumEntity.FournisseurCarburant;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -17,6 +19,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(exclude = {"users", "chapitres"})
 public class Formation {
 
     @Id
@@ -42,17 +45,15 @@ public class Formation {
     @Enumerated(EnumType.STRING)
     private StatutFormation statut ;
 
+    @OneToMany(mappedBy = "formation", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private List<UserFormation> users = new ArrayList<>();
 
-
-    @OneToMany(mappedBy = "formation" , cascade = CascadeType.ALL, orphanRemoval = true )
-    private List<UserFormation> users;
-
-    @OneToOne (cascade = CascadeType.ALL)
-    @JoinColumn(name = "certificat_id"  )
+    @OneToOne
+    @JoinColumn(name = "certificat_id")
     private Certificat certificat;
 
-    @OneToMany(mappedBy = "formation" , cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Chapitre> chapitres;
-
+    @OneToMany(mappedBy = "formation", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<Chapitre> chapitres = new ArrayList<>();
 
 }

@@ -23,13 +23,13 @@ public class FormationLiteController {
     }
 
 
-    @GetMapping("/alllite")
+    @GetMapping
     public ResponseEntity<List<Object>> getAllFormationlite() {
         return ResponseEntity.ok(mediator.sendToHandlers(new GetFormationLiteQuery()));
     }
 
 
-    @PostMapping("/addlite")
+    @PostMapping
     public ResponseEntity<Object> lite(@Valid @RequestBody AddFormationLiteCommand command) {
         Object result = mediator.sendToHandlers(command);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);

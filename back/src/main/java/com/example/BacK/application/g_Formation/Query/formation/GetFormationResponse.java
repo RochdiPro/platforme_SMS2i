@@ -13,18 +13,22 @@ import java.util.Date;
 @Data
 
 public class GetFormationResponse {
-    private Long id ;
-    private String objectif;
-    private String domaine;
-    private String type;
-    private Date dateDebut;
-    private Date dateFin;
-    private Double prix;
-    private Integer nombreMaximal;
-    private String description;
-    private String niveau;
-    private CertificatDTO certificat;
+
+        private Long id ;
+        private String objectif;
+        private String domaine;
+        private String type;
+        private Date dateDebut;
+        private Date dateFin;
+        private Double prix;
+        private Integer nombreMaximal;
+        private String description;
+        private String niveau;
+        private String categorie;
+        private String statut;
+        private CertificatDTO certificat;
+
+    }
 
 
 
-}

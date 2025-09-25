@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AddUserFormationCommand {
 
-    private Long id;
+    private Long formationId;
     private String nom;
     private String prenom;
     private String email;
@@ -23,6 +23,5 @@ public class AddUserFormationCommand {
     private String description;
     private String niveauActuel;
     private String pieceIdentite;
-    private FormationDTO formation;
 
 }

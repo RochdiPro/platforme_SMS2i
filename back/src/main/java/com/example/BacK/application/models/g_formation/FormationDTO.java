@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -21,6 +23,8 @@ public class FormationDTO {
     private Integer nombreMaximal;
     private String description;
     private String niveau;
-    private CertificatDTO certificat;
-
+    private String categorie;
+    private String statut;
+    private List<UserFormationDTO> users = new ArrayList<>();
+    private Long CertificatId ;
 }
