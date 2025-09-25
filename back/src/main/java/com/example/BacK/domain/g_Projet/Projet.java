@@ -2,8 +2,7 @@ package com.example.BacK.domain.g_Projet;
 
 import com.example.BacK.domain.g_Projet.enumEntity.PrioriteProjet;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutProjet;
-import com.example.BacK.domain.g_Projet.enumEntity.TypeProjet;
-import jakarta.persistence.*;
+ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
 import java.util.List;
@@ -24,9 +23,7 @@ public class Projet {
 
     private String nom;
     private String description;
-
-    @Enumerated(EnumType.STRING)
-    private TypeProjet type;
+    private String type;
 
     @Enumerated(EnumType.STRING)
     private StatutProjet statut;

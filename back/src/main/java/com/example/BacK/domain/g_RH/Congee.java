@@ -1,5 +1,6 @@
 package com.example.BacK.domain.g_RH;
 
+import com.example.BacK.domain.Auditable;
 import com.example.BacK.domain.g_RH.enumEntity.StatutConge;
 import com.example.BacK.domain.g_RH.enumEntity.TypeConge;
 import jakarta.persistence.*;
@@ -12,7 +13,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Congee {
+public class Congee  extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -30,7 +31,6 @@ public class Congee {
     @Enumerated(EnumType.STRING)
     private StatutConge statut;
 
-    private LocalDate dateCreation;
     private LocalDate dateValidation;
     private String validePar;
 
