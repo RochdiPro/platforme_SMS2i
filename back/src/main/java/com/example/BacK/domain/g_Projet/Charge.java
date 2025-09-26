@@ -29,7 +29,6 @@ public class Charge  extends Auditable {
     private LocalDate dateFin;
     private String description;
 
-
     @ManyToOne
     @JoinColumn(name = "tache_id")
     private Tache tache;

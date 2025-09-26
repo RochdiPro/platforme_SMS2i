@@ -38,7 +38,6 @@ public class EmployeAffecte {
     @Enumerated(EnumType.STRING)
     private StatutAffectation statut;
 
-    // Relations
     @ManyToOne
     @JoinColumn(name = "tache_id")
     private Tache tache;
