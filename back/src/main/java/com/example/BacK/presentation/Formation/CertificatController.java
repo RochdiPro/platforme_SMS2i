@@ -5,6 +5,7 @@ import com.example.BacK.application.g_Formation.Command.Certificat.deleteCertifi
 import com.example.BacK.application.g_Formation.Command.Certificat.updateCertificat.UpdateCertificatCommand;
 import com.example.BacK.application.g_Formation.Query.Certificat.GetCertificatQuery;
 import com.example.BacK.application.mediator.Mediator;
+import com.example.BacK.application.models.CertificatDTO;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,13 +23,13 @@ public class CertificatController {
         this.mediator = mediator;
     }
 
-    @GetMapping("/allcertificat")
-    public ResponseEntity<List<Object>> getAllCertificat() {
+    @GetMapping
+    public ResponseEntity<List<CertificatDTO>> getAllCertificat() {
         return ResponseEntity.ok(mediator.sendToHandlers(new GetCertificatQuery()));
     }
 
 
-    @PostMapping("/addcertificat")
+    @PostMapping
     public ResponseEntity<Object> addCertificat(@Valid @RequestBody AddCertificatCommand command) {
         Object result = mediator.sendToHandlers(command);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);

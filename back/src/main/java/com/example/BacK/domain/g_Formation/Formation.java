@@ -1,11 +1,17 @@
 package com.example.BacK.domain.g_Formation;
 
+import com.example.BacK.domain.g_Formation.enumEntity.CategorieFormation;
+import com.example.BacK.domain.g_Formation.enumEntity.NiveauFormation;
+import com.example.BacK.domain.g_Formation.enumEntity.StatutFormation;
+import com.example.BacK.domain.g_Formation.enumEntity.TypeFormation;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -13,6 +19,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(exclude = {"users", "chapitres"})
 public class Formation {
 
     @Id
@@ -20,26 +27,32 @@ public class Formation {
     private Long id;
     private String objectif;
     private String domaine;
-    private String type;
     private Date dateDebut;
     private Date dateFin;
     private Double prix;
     private Integer nombreMaximal;
     private String description;
-    private String niveau;
 
-    @OneToMany(mappedBy = "formation" , cascade = CascadeType.ALL, orphanRemoval = true )
-    private List<UserFormation> users;
+    @Enumerated(EnumType.STRING)
+    private TypeFormation type;
 
-    @OneToOne (cascade = CascadeType.ALL)
-    @JoinColumn(name = "certificat_id"  )
+    @Enumerated(EnumType.STRING)
+    private NiveauFormation niveau;
+
+    @Enumerated(EnumType.STRING)
+    private CategorieFormation categorie;
+
+    @Enumerated(EnumType.STRING)
+    private StatutFormation statut;
+
+    @OneToMany(mappedBy = "formation", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private List<UserFormation> users = new ArrayList<>();
+
+    @OneToOne
+    @JoinColumn(name = "certificat_id")
     private Certificat certificat;
 
-    @OneToMany(mappedBy = "formation" , cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Chapitre> chapitres;
-
-
-
-
-
+    @OneToMany(mappedBy = "formation", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<Chapitre> chapitres = new ArrayList<>();
 }

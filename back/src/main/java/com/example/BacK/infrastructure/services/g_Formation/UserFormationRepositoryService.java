@@ -44,7 +44,7 @@ public class UserFormationRepositoryService implements IUserFormationRepositoryS
     }
 
     @Override
-    public UserFormation get(Long id) {
+    public UserFormation getByid(Long id) {
         return userFormationRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("UserFormation avec ID " + id + " introuvable"));
     }

@@ -22,13 +22,13 @@ public class ContenuController {
         this.mediator = mediator;
     }
 
-    @GetMapping("/allcontenu")
+    @GetMapping
     public ResponseEntity<List<Object>> getAllContenu() {
         return ResponseEntity.ok(mediator.sendToHandlers(new GetContenuQuery()));
     }
 
 
-    @PostMapping("/addcontenu")
+    @PostMapping
     public ResponseEntity<Object> addContenu(@Valid @RequestBody AddContenuCommand command) {
         Object result = mediator.sendToHandlers(command);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);

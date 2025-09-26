@@ -1,9 +1,13 @@
 package com.example.BacK.domain.g_Formation;
 
+import com.example.BacK.domain.g_Formation.enumEntity.CategorieFormation;
+import com.example.BacK.domain.g_Formation.enumEntity.StatutParticipant;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -11,6 +15,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(exclude = {"formation", "evaluations"})
 public class UserFormation {
 
     @Id
@@ -27,12 +32,14 @@ public class UserFormation {
     private String niveauActuel;
     private String pieceIdentite;
 
+    @Enumerated(EnumType.STRING)
+    private StatutParticipant statut;
+
     @ManyToOne
     @JoinColumn(name = "formation_id")
+    @JsonBackReference
     private Formation formation;
 
-    @OneToMany(mappedBy = "userFormation" , cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "userFormation", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Evaluation> evaluations;
-
-
 }

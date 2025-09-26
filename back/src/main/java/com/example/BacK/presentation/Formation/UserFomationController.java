@@ -25,17 +25,19 @@ public class UserFomationController {
     }
 
 
-    @GetMapping("/alluser")
+    @GetMapping
     public ResponseEntity<List<Object>> getAllUserFomation() {
         return ResponseEntity.ok(mediator.sendToHandlers(new GetUserFormationQuery()));
     }
 
 
-    @PostMapping("/adduser")
+    @PostMapping
     public ResponseEntity<Object> lite(@Valid @RequestBody AddUserFormationCommand command) {
         Object result = mediator.sendToHandlers(command);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
+
+
 
     @PutMapping("/{id}")
     public ResponseEntity<Void> updateFormationlite(@PathVariable Long id,

@@ -1,5 +1,7 @@
 package com.example.BacK.domain.g_Formation;
 
+import com.example.BacK.domain.g_Formation.enumEntity.TypeContenu;
+import com.example.BacK.domain.g_Formation.enumEntity.TypeFormation;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +19,11 @@ public class Contenu {
     private String url;
     private String titre;
     private String description;
-    private String type;
+
+    @Enumerated(EnumType.STRING)
+    private TypeContenu type;
+
+
 
     @ManyToOne
     @JoinColumn(name = "seance_id")

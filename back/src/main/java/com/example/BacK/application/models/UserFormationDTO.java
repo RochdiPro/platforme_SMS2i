@@ -1,7 +1,5 @@
-package com.example.BacK.application.g_Formation.Command.UserFormation.addUserFormation;
+package com.example.BacK.application.models;
 
-import com.example.BacK.application.models.FormationDTO;
-import com.example.BacK.domain.g_Formation.Formation;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,9 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AddUserFormationCommand {
+public class UserFormationDTO {
 
-    private Long formationId;
+    private Long id;
     private String nom;
     private String prenom;
     private String email;
@@ -23,5 +21,6 @@ public class AddUserFormationCommand {
     private String description;
     private String niveauActuel;
     private String pieceIdentite;
+    private FormationDTO formation;
 
 }

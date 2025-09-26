@@ -8,7 +8,7 @@ public interface ICertificatRepositoryService {
     String add(Certificat certificat);
     void update(Certificat certificat);
     void delete(Long id);
-    Certificat get(Long id);
+    Certificat getByid(Long id);
     List<Certificat> getAll();
 
 }

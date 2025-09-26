@@ -1,7 +1,7 @@
 package com.example.BacK.application.g_Formation.Query.Chapitre;
 
-import com.example.BacK.domain.g_Formation.Formation;
-import com.example.BacK.domain.g_Formation.Seance;
+import com.example.BacK.application.models.FormationDTO;
+import com.example.BacK.application.models.SeanceDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +18,7 @@ public class GetChapitreQuery {
     private String description;
     private String objectif;
     private String niveau;
-    private Formation formation;
-    private List<Seance> seances;
+    private FormationDTO formation;
+    private List<SeanceDTO> seances;
 
 }
