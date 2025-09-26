@@ -1,6 +1,7 @@
 package com.example.BacK.domain.g_Projet;
 
 // Mission.java
+import com.example.BacK.domain.Auditable;
 import com.example.BacK.domain.g_Projet.enumEntity.PrioriteMission;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutMission;
 import jakarta.persistence.*;
@@ -14,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Mission {
+public class Mission  extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -57,6 +58,4 @@ public class Mission {
     @ElementCollection
     private List<String> livrables;
 
-    private LocalDate createdAt;
-    private LocalDate updatedAt;
 }

@@ -10,8 +10,6 @@ public class AddCongeeValidator implements ConstraintValidator<IAddCongeeCommand
         if (command == null) {
             return false;
         }
-
-
         return true;
     }
 }
