@@ -2,6 +2,7 @@ package com.example.BacK.application.g_Formation.Command.UserFormation.addUserFo
 
 
 import com.example.BacK.application.mediator.RequestHandler;
+import com.example.BacK.application.models.UserFormationDTO;
 import com.example.BacK.domain.g_Formation.Formation;
 import com.example.BacK.domain.g_Formation.UserFormation;
 import com.example.BacK.infrastructure.services.g_Formation.FormationRepositoryService;
@@ -40,7 +41,9 @@ public class AddUserFormationHandler implements RequestHandler<AddUserFormationC
             throw new IllegalArgumentException("formationId est obligatoire pour ajouter un participant !");
         }
 
-        String id = String.valueOf(userFormationRepositoryService.add(userFormation));
-        return new AddUserFormationResponse(id);
+        UserFormation saved = userFormationRepositoryService.add(userFormation);
+
+        UserFormationDTO dto = modelMapper.map(saved, UserFormationDTO.class);
+        return new AddUserFormationResponse(dto);
     }
 }
