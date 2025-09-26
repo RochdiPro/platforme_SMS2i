@@ -27,5 +27,5 @@ public class FormationDTO {
     private String categorie;
     private String statut;
     private List<UserFormationDTO> users = new ArrayList<>();
-    private Long CertificatId ;
+    private Long certificatId;
 }

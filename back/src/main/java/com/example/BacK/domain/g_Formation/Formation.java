@@ -37,13 +37,13 @@ public class Formation {
     private TypeFormation type;
 
     @Enumerated(EnumType.STRING)
-    private NiveauFormation niveau ;
+    private NiveauFormation niveau;
 
     @Enumerated(EnumType.STRING)
-    private CategorieFormation categorie ;
+    private CategorieFormation categorie;
 
     @Enumerated(EnumType.STRING)
-    private StatutFormation statut ;
+    private StatutFormation statut;
 
     @OneToMany(mappedBy = "formation", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JsonManagedReference
@@ -55,5 +55,4 @@ public class Formation {
 
     @OneToMany(mappedBy = "formation", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Chapitre> chapitres = new ArrayList<>();
-
 }

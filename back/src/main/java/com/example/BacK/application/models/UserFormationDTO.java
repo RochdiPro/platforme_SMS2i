@@ -10,17 +10,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserFormationDTO {
 
-    private Long id;
-    private String nom;
-    private String prenom;
-    private String email;
-    private String password;
-    private String numeroPieceIdentite;
-    private String telephone;
-    private String adresse;
-    private String description;
-    private String niveauActuel;
-    private String pieceIdentite;
-    private FormationDTO formation;
+        private Long id;
+        private String nom;
+        private String prenom;
+        private String email;
+        private String password;
+        private String numeroPieceIdentite;
+        private String telephone;
+        private String adresse;
+        private String description;
+        private String niveauActuel;
+        private String pieceIdentite;
+        private Long formationId;
+    }
 
-}
+

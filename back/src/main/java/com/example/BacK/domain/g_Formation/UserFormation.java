@@ -16,7 +16,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(exclude = {"formation", "evaluations"})
-
 public class UserFormation {
 
     @Id
@@ -34,15 +33,13 @@ public class UserFormation {
     private String pieceIdentite;
 
     @Enumerated(EnumType.STRING)
-    private StatutParticipant statut ;
-
+    private StatutParticipant statut;
 
     @ManyToOne
     @JoinColumn(name = "formation_id")
+    @JsonBackReference
     private Formation formation;
 
-    @OneToMany(mappedBy = "userFormation" , cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "userFormation", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Evaluation> evaluations;
-
-
 }
