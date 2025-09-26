@@ -2,7 +2,7 @@ package com.example.BacK.presentation.g_projet;
 
 
 import com.example.BacK.application.g_Projet.Command.charge.add.AddChargeCommand;
-import com.example.BacK.application.g_Projet.Command.charge.add.AddChargeRsponse;
+import com.example.BacK.application.g_Projet.Command.charge.add.AddChargeResponse;
 import com.example.BacK.application.g_Projet.Command.charge.delete.DeleteChargeCommand;
 import com.example.BacK.application.g_Projet.Command.charge.update.UpdateChargeCommand;
 import com.example.BacK.application.g_Projet.Query.charge.GetChargeQuery;
@@ -24,7 +24,7 @@ public class ChargeController {
     }
 
     @PostMapping
-    public ResponseEntity<List<AddChargeRsponse>> add(@RequestBody AddChargeCommand command) {
+    public ResponseEntity<List<AddChargeResponse>> add(@RequestBody AddChargeCommand command) {
         return ResponseEntity.status(HttpStatus.CREATED).body(mediator.sendToHandlers(command));
     }
 

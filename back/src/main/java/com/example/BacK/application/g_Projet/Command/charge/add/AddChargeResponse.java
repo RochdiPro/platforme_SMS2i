@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AddChargeRsponse {
+public class AddChargeResponse {
     private String id;
 
 }
