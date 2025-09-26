@@ -1,4 +1,4 @@
-package com.example.BacK.application.g_Formation.Query.formation;
+package com.example.BacK.application.g_Formation.Query.formation.formationById;
 
 import com.example.BacK.domain.g_Formation.Formation;
 import lombok.AllArgsConstructor;
