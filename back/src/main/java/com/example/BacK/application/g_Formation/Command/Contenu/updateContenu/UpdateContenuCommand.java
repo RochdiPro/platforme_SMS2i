@@ -1,11 +1,9 @@
 package com.example.BacK.application.g_Formation.Command.Contenu.updateContenu;
 
-import com.example.BacK.application.models.EvaluationDTO;
-import com.example.BacK.application.models.FormationLiteDTO;
-import com.example.BacK.application.models.SeanceDTO;
-import com.example.BacK.domain.g_Formation.Evaluation;
-import com.example.BacK.domain.g_Formation.FormationLite;
-import com.example.BacK.domain.g_Formation.Seance;
+
+import com.example.BacK.application.models.g_formation.EvaluationDTO;
+import com.example.BacK.application.models.g_formation.FormationLiteDTO;
+import com.example.BacK.application.models.g_formation.SeanceDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

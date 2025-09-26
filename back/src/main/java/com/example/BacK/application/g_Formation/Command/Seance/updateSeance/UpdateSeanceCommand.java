@@ -1,7 +1,7 @@
 package com.example.BacK.application.g_Formation.Command.Seance.updateSeance;
 
-import com.example.BacK.application.models.ChapitreDTO;
-import com.example.BacK.application.models.ContenuDTO;
+import com.example.BacK.application.models.g_formation.ChapitreDTO;
+import com.example.BacK.application.models.g_formation.ContenuDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

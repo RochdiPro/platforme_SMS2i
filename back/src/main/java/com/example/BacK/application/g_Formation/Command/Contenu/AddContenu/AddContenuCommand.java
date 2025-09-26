@@ -1,8 +1,9 @@
 package com.example.BacK.application.g_Formation.Command.Contenu.AddContenu;
 
-import com.example.BacK.application.models.EvaluationDTO;
-import com.example.BacK.application.models.FormationLiteDTO;
-import com.example.BacK.application.models.SeanceDTO;
+
+import com.example.BacK.application.models.g_formation.EvaluationDTO;
+import com.example.BacK.application.models.g_formation.FormationLiteDTO;
+import com.example.BacK.application.models.g_formation.SeanceDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

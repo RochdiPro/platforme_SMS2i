@@ -1,7 +1,8 @@
 package com.example.BacK.application.g_Formation.Query.Chapitre;
 
-import com.example.BacK.application.models.FormationDTO;
-import com.example.BacK.application.models.SeanceDTO;
+
+import com.example.BacK.application.models.g_formation.FormationDTO;
+import com.example.BacK.application.models.g_formation.SeanceDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

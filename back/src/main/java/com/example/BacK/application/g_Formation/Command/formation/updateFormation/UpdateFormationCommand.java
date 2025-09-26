@@ -1,6 +1,7 @@
 package com.example.BacK.application.g_Formation.Command.formation.updateFormation;
 
-import com.example.BacK.application.models.CertificatDTO;
+
+import com.example.BacK.application.models.g_formation.CertificatDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

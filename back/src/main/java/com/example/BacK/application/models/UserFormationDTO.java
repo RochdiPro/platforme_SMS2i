@@ -1,5 +1,6 @@
 package com.example.BacK.application.models;
 
+import com.example.BacK.application.models.g_formation.FormationDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

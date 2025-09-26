@@ -1,6 +1,6 @@
 package com.example.BacK.application.g_Formation.Query.UserFormation;
 
-import com.example.BacK.application.models.FormationDTO;
+import com.example.BacK.application.models.g_formation.FormationDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,6 @@
 package com.example.BacK.application.g_Formation.Query.formationLite;
 
-import com.example.BacK.application.models.ContenuDTO;
-import lombok.AllArgsConstructor;
+ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

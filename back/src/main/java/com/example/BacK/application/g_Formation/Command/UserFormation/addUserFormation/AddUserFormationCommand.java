@@ -1,6 +1,6 @@
 package com.example.BacK.application.g_Formation.Command.UserFormation.addUserFormation;
 
-import com.example.BacK.application.models.FormationDTO;
+
 import com.example.BacK.domain.g_Formation.Formation;
 import lombok.AllArgsConstructor;
 import lombok.Data;

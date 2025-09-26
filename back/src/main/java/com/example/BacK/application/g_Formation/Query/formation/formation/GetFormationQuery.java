@@ -1,7 +1,7 @@
-package com.example.BacK.application.g_Formation.Query.formation;
+package com.example.BacK.application.g_Formation.Query.formation.formation;
 
-import com.example.BacK.application.models.CertificatDTO;
-import com.example.BacK.domain.g_Formation.Certificat;
+ import com.example.BacK.application.models.g_formation.CertificatDTO;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
