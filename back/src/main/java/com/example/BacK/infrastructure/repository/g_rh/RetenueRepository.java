@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RetuneRepository extends JpaRepository<Retenue, String> {
+public interface RetenueRepository extends JpaRepository<Retenue, String> {
 
 }

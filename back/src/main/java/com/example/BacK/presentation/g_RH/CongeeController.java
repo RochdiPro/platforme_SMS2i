@@ -6,6 +6,7 @@ import com.example.BacK.application.g_RH.Command.congee.deleteCongee.DeleteConge
 import com.example.BacK.application.g_RH.Command.congee.updateCongee.UpdateCongeeCommand;
 import com.example.BacK.application.g_RH.Query.congee.GetCongeeQuery;
 import com.example.BacK.application.mediator.Mediator;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,11 +23,19 @@ public class CongeeController {
         this.mediator = mediator;
     }
 
+    @Operation(
+            summary = "Ajouter un congé",
+            description = "Crée un nouveau congé appliqué en interne selon le protocole de travail de la société"
+    )
     @PostMapping
     public ResponseEntity<List<AddCongeeResponse>> add(@RequestBody AddCongeeCommand command) {
         return ResponseEntity.status(HttpStatus.CREATED).body(mediator.sendToHandlers(command));
     }
 
+    @Operation(
+            summary = "Mettre à jour un congé",
+            description = "Met à jour un congé existant appliqué en interne selon le protocole de travail de la société"
+    )
     @PutMapping("/{id}")
     public ResponseEntity<Void> update(@PathVariable String id, @RequestBody UpdateCongeeCommand command) {
         command.setId(id);
@@ -34,17 +43,29 @@ public class CongeeController {
         return ResponseEntity.accepted().build();
     }
 
+    @Operation(
+            summary = "Supprimer un congé",
+            description = "Supprime un congé appliqué en interne selon le protocole de travail de la société"
+    )
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable String id) {
         mediator.sendToHandlers(new DeleteCongeeCommand(id));
         return ResponseEntity.noContent().build();
     }
 
+    @Operation(
+            summary = "Filtrer les congés",
+            description = "Recherche les congés appliqués en interne selon le protocole de travail de la société"
+    )
     @PostMapping("/search")
     public ResponseEntity<List<Object>> filter(@RequestBody GetCongeeQuery query) {
         return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
 
+    @Operation(
+            summary = "Récupérer tous les congés",
+            description = "Retourne la liste de tous les congés appliqués en interne selon le protocole de travail de la société"
+    )
     @GetMapping
     public ResponseEntity<List<Object>> getAll() {
         GetCongeeQuery query = new GetCongeeQuery();

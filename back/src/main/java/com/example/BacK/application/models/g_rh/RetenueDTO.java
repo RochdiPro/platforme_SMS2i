@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class RetenueDTO {
+
     private String id;
     private String libelle;
     private double montant;

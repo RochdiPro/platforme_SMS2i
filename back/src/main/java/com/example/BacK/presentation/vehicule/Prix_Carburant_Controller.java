@@ -3,6 +3,7 @@ package com.example.BacK.presentation.vehicule;
 import com.example.BacK.application.g_Vehicule.Command.prix_Carburant.UpdatePrixCarburantCommand;
 import com.example.BacK.application.mediator.Mediator;
 import com.example.BacK.domain.g_Vehicule.Prix_Carburant;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class Prix_Carburant_Controller {
         this.mediator = mediator;
     }
 
-
+    @Operation(summary = "Mettre à jour le prix carburant", description = "Met à jour le prix d'un carburant par son ID")
     @PutMapping("/{id}")
     public ResponseEntity<Prix_Carburant> update(@PathVariable String id,   @RequestBody UpdatePrixCarburantCommand command) {
         command.setId(id);
@@ -26,6 +27,7 @@ public class Prix_Carburant_Controller {
         return ResponseEntity.accepted().build();
     }
 
+    @Operation(summary = "Récupérer tous les prix carburant", description = "Retourne la liste de tous les prix de carburant")
     @GetMapping
     public ResponseEntity<List<Prix_Carburant>> getAll() {
         Prix_Carburant query = new Prix_Carburant();
