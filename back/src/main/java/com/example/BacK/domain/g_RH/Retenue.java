@@ -3,6 +3,8 @@ package com.example.BacK.domain.g_RH;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -31,5 +33,7 @@ public class Retenue {
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
+    @OneToMany(mappedBy = "retenue")
+    private List<Regle> regle ;
 
 }

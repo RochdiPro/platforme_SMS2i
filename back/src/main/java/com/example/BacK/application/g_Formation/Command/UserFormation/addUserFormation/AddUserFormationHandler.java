@@ -42,7 +42,6 @@ public class AddUserFormationHandler implements RequestHandler<AddUserFormationC
         }
 
         UserFormation saved = userFormationRepositoryService.add(userFormation);
-
         UserFormationDTO dto = modelMapper.map(saved, UserFormationDTO.class);
         return new AddUserFormationResponse(dto);
     }

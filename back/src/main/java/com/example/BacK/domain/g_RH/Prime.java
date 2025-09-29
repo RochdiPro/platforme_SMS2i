@@ -1,7 +1,10 @@
 package com.example.BacK.domain.g_RH;
 
+import com.example.BacK.domain.Auditable;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -9,7 +12,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Prime {
+public class Prime extends Auditable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36)
@@ -32,4 +35,6 @@ public class Prime {
     private Employee employee;
 
 
+    @OneToMany(mappedBy = "prime")
+    private List<Regle> regles ;
 }
