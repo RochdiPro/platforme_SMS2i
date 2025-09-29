@@ -5,11 +5,8 @@ import com.example.BacK.domain.g_Formation.Formation;
 import com.example.BacK.infrastructure.services.g_Formation.FormationRepositoryService;
 import org.springframework.stereotype.Component;
 
-import java.util.Collections;
-import java.util.List;
-
 @Component
-public class GetFormationByIdHandler  implements RequestHandler<GetFormationByIdQuery, List<GetFormationByIdResponse>> {
+public class GetFormationByIdHandler implements RequestHandler<GetFormationByIdQuery, GetFormationByIdResponse> {
 
     private final FormationRepositoryService formationRepositoryService;
 
@@ -18,8 +15,8 @@ public class GetFormationByIdHandler  implements RequestHandler<GetFormationById
     }
 
     @Override
-    public List<GetFormationByIdResponse> handle(GetFormationByIdQuery command) {
+    public GetFormationByIdResponse handle(GetFormationByIdQuery command) {
         Formation formation = formationRepositoryService.get(command.getId());
-        return Collections.singletonList(new GetFormationByIdResponse(formation));
+        return new GetFormationByIdResponse(formation);
     }
 }

@@ -6,6 +6,7 @@ import com.example.BacK.application.g_Formation.Command.formation.deleteFormatio
 import com.example.BacK.application.g_Formation.Command.formation.updateFormation.UpdateFormationCommand;
 import com.example.BacK.application.g_Formation.Query.formation.formationById.GetFormationByIdQuery;
 import com.example.BacK.application.g_Formation.Query.formation.formation.GetFormationQuery;
+import com.example.BacK.application.g_Formation.Query.formation.formationById.GetFormationByIdResponse;
 import com.example.BacK.application.mediator.Mediator;
 import com.example.BacK.domain.g_Formation.Formation;
 import org.springframework.http.ResponseEntity;
@@ -49,9 +50,9 @@ public class FormationController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Formation> getFormationById(@PathVariable Long id) {
-        Formation formation = (Formation) mediator.sendToHandlers(new GetFormationByIdQuery(id));
-        return ResponseEntity.ok(formation);
+    public ResponseEntity<GetFormationByIdResponse> getFormationById(@PathVariable Long id) {
+        GetFormationByIdResponse response = (GetFormationByIdResponse) mediator.sendToHandlers(new GetFormationByIdQuery(id));
+        return ResponseEntity.ok(response);
     }
 
 
