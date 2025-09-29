@@ -6,6 +6,7 @@ import com.example.BacK.application.g_Vehicule.Command.vehicule.addVehicule.AddV
 import com.example.BacK.application.g_Vehicule.Command.vehicule.addVehicule.AddVehiculeResponse;
 import com.example.BacK.application.g_Vehicule.Command.vehicule.deleteVehicule.DeleteVehiculeCommand;
 import com.example.BacK.application.g_Vehicule.Query.vehicule.GetVehiculeQuery;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,7 @@ public class VehiculeController {
         this.mediator = mediator;
     }
 
-    // ➤ Ajouter un véhicule
+    @Operation(summary = "Ajouter un véhicule", description = "Crée un nouveau véhicule dans le système")
     @PostMapping
     public ResponseEntity<List<AddVehiculeResponse>> add(@RequestBody AddVehiculeCommand command) {
         return ResponseEntity
@@ -31,7 +32,7 @@ public class VehiculeController {
                 .body(mediator.sendToHandlers(command));
     }
 
-    // ➤ Mettre à jour un véhicule
+    @Operation(summary = "Mettre à jour un véhicule", description = "Met à jour les informations d'un véhicule existant")
     @PutMapping("/{id}")
     public ResponseEntity<Void> update(@PathVariable String id, @RequestBody UpdateVehiculeCommand command) {
         command.setId(id);
@@ -39,27 +40,24 @@ public class VehiculeController {
         return ResponseEntity.accepted().build();
     }
 
-    // ➤ Supprimer un véhicule
+    @Operation(summary = "Supprimer un véhicule", description = "Supprime un véhicule existant par son ID")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable String id) {
         mediator.sendToHandlers(new DeleteVehiculeCommand(id));
         return ResponseEntity.noContent().build();
     }
 
-    // ➤ Rechercher avec filtres
+    @Operation(summary = "Filtrer les véhicules", description = "Recherche les véhicules selon des critères spécifiques")
     @PostMapping("/search")
     public ResponseEntity<List<Object>> filter(@RequestBody GetVehiculeQuery query) {
         return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
 
-    // ➤ Récupérer tous les véhicules
+    @Operation(summary = "Récupérer tous les véhicules", description = "Retourne la liste de tous les véhicules")
     @GetMapping
     public ResponseEntity<List<Object>> getAll() {
         GetVehiculeQuery query = new GetVehiculeQuery();
         return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
-    @GetMapping("/ping")
-    public ResponseEntity<String> ping() {
-        return ResponseEntity.ok("pong");
-    }
+
 }

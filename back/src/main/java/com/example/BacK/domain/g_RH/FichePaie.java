@@ -1,5 +1,6 @@
 package com.example.BacK.domain.g_RH;
 
+import com.example.BacK.domain.Auditable;
 import com.example.BacK.domain.g_RH.enumEntity.StatutFichePaie;
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,7 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class FichePaie {
+public class FichePaie extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

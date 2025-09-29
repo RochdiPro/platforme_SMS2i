@@ -5,6 +5,7 @@ import com.example.BacK.application.g_Projet.Command.EmployeAffecte.delete.Delet
 import com.example.BacK.application.g_Projet.Command.EmployeAffecte.update.UpdateEmployeeAffecteCommand;
 import com.example.BacK.application.g_Projet.Query.EmployeAffecte.GetEmployeAffecteQuery;
 import com.example.BacK.application.mediator.Mediator;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,11 +22,19 @@ public class EmployeAffecteController {
         this.mediator = mediator;
     }
 
+    @Operation(
+            summary = "Ajouter un employé affecté",
+            description = "Crée un nouvel employé affecté appliqué en interne selon le protocole de travail de la société"
+    )
     @PostMapping
     public ResponseEntity<List<AddEmployeeAffecteResponse>> add(@RequestBody AddEmployeeAffecteCommand command) {
         return ResponseEntity.status(HttpStatus.CREATED).body(mediator.sendToHandlers(command));
     }
 
+    @Operation(
+            summary = "Mettre à jour un employé affecté",
+            description = "Met à jour un employé affecté existant appliqué en interne selon le protocole de travail de la société"
+    )
     @PutMapping("/{id}")
     public ResponseEntity<Void> update(@PathVariable String id, @RequestBody UpdateEmployeeAffecteCommand command) {
         command.setId(id);
@@ -33,17 +42,29 @@ public class EmployeAffecteController {
         return ResponseEntity.accepted().build();
     }
 
+    @Operation(
+            summary = "Supprimer un employé affecté",
+            description = "Supprime un employé affecté appliqué en interne selon le protocole de travail de la société"
+    )
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable String id) {
         mediator.sendToHandlers(new DeleteEmployeeAffecteCommand(id));
         return ResponseEntity.noContent().build();
     }
 
+    @Operation(
+            summary = "Filtrer les employés affectés",
+            description = "Recherche les employés affectés appliqués en interne selon le protocole de travail de la société"
+    )
     @PostMapping("/search")
     public ResponseEntity<List<Object>> filter(@RequestBody GetEmployeAffecteQuery query) {
         return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
 
+    @Operation(
+            summary = "Récupérer tous les employés affectés",
+            description = "Retourne la liste de tous les employés affectés appliqués en interne selon le protocole de travail de la société"
+    )
     @GetMapping
     public ResponseEntity<List<Object>> getAll() {
         GetEmployeAffecteQuery query = new GetEmployeAffecteQuery();

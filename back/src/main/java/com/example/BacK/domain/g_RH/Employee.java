@@ -56,5 +56,8 @@ public class Employee extends Auditable {
 
     @OneToMany(mappedBy = "employe", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Charge> charges;
+
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+    private List<FichePaie> fichesPaie ;
 }
 
