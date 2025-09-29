@@ -41,7 +41,7 @@ public class AddEvaluationHandler implements RequestHandler<AddEvaluationCommand
         }
 
         if (command.getUserFormation() != null && command.getUserFormation().getId() != null) {
-            UserFormation uf = userFormationRepositoryService.getByid(command.getUserFormation().getId());
+            UserFormation uf = userFormationRepositoryService.getByid(Long.valueOf(command.getUserFormation().getId()));
             evaluation.setUserFormation(uf);
         }
 

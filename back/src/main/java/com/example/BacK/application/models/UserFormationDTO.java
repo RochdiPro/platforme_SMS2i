@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserFormationDTO {
 
-    private Long id;
+    private String id;
     private String nom;
     private String prenom;
     private String email;
