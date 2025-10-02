@@ -45,7 +45,8 @@ public class VehiculeRepositoryService implements IVehiculeRepositoryService {
 
     @Override
     public Vehicule get(String id) {
-        return this._vehiculeRepository.findById(id).orElse(null);
+        return this._vehiculeRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Vehicule not found"));
     }
 
     @Override
