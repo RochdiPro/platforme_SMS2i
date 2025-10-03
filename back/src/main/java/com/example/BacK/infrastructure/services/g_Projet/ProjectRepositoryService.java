@@ -1,6 +1,6 @@
 package com.example.BacK.infrastructure.services.g_Projet;
 
-import com.example.BacK.application.g_Projet.Query.projet.GetProjetResponse;
+import com.example.BacK.application.g_Projet.Query.projet.all.GetProjetResponse;
 import com.example.BacK.application.interfaces.g_Projet.projet.IProjetRepositoryService;
 import com.example.BacK.domain.g_Projet.Projet;
 import com.example.BacK.infrastructure.repository.g_Projet.ProjectRepository;
@@ -42,7 +42,8 @@ public class ProjectRepositoryService implements IProjetRepositoryService {
 
     @Override
     public Projet get(String id) {
-        return projectRepository.findById(id).orElse(null);
+        return    projectRepository.findById(id).orElse(null);
+
     }
 
     @Override

@@ -24,6 +24,5 @@ public class GetPhaseQuery {
     private Double progression;
     private Double budget;
     private ProjetDTO projet;
-    private List<MissionDTO> missions;
-    private List<String> livrables;
+
 }

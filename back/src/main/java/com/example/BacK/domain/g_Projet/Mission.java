@@ -7,6 +7,7 @@ import com.example.BacK.domain.g_Projet.enumEntity.StatutMission;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -46,16 +47,12 @@ public class Mission  extends Auditable {
     @JoinColumn(name = "phase_id")
     private Phase phase;
 
-    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
-    private List<Tache> taches;
+    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Tache> taches = new ArrayList<>();
 
-    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
-    private List<EmployeAffecte> employesAffectes;
+    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<EmployeAffecte> employesAffectes = new ArrayList<>();
 
-    @ElementCollection
-    private List<String> dependances;
 
-    @ElementCollection
-    private List<String> livrables;
 
 }

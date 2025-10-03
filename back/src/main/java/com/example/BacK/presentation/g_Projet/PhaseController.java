@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/Phase")
+@RequestMapping("api/phase")
 public class PhaseController {
 
     private final Mediator mediator;

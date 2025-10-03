@@ -1,5 +1,6 @@
-package com.example.BacK.application.g_Projet.Query.projet;
+package com.example.BacK.application.g_Projet.Query.projet.all;
 
+import com.example.BacK.application.models.g_Client.ClientDTO;
 import com.example.BacK.application.models.g_projet.MissionDTO;
 import com.example.BacK.domain.g_Projet.enumEntity.PrioriteProjet;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutProjet;
@@ -20,7 +21,7 @@ public class GetProjetQuery {
     private StatutProjet statut;
     private PrioriteProjet priorite;
     private String chefProjet;
-    private String client;
+    private ClientDTO client;
     private LocalDate dateDebut;
     private LocalDate dateFin;
     private LocalDate dateFinPrevue;

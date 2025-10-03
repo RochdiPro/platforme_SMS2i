@@ -4,7 +4,11 @@ import com.example.BacK.application.g_Projet.Command.projet.add.AddProjetCommand
 import com.example.BacK.application.g_Projet.Command.projet.add.AddProjetResponse;
 import com.example.BacK.application.g_Projet.Command.projet.delete.DeleteProjetCommand;
 import com.example.BacK.application.g_Projet.Command.projet.update.UpdateProjetCommand;
-import com.example.BacK.application.g_Projet.Query.projet.GetProjetQuery;
+import com.example.BacK.application.g_Projet.Query.projet.all.GetProjetQuery;
+import com.example.BacK.application.g_Projet.Query.projet.all.GetProjetResponse;
+import com.example.BacK.application.g_Projet.Query.projet.byId.GetProjetByIDHandler;
+import com.example.BacK.application.g_Projet.Query.projet.byId.GetProjetByIDQuery;
+import com.example.BacK.application.g_Projet.Query.projet.byId.GetProjetByIDResponse;
 import com.example.BacK.application.mediator.Mediator;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
@@ -14,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/Projet")
+@RequestMapping("api/projet")
 public class ProjetController {
 
     private final Mediator mediator;
@@ -70,5 +74,12 @@ public class ProjetController {
     public ResponseEntity<List<Object>> getAll() {
         GetProjetQuery query = new GetProjetQuery();
         return ResponseEntity.ok(mediator.sendToHandlers(query));
+    }
+
+    @Operation(summary = "Récupérer un projet par ID")
+    @GetMapping("/{id}")
+    public ResponseEntity<List<Object>> getById(@PathVariable String id) {
+        GetProjetByIDQuery query = new GetProjetByIDQuery(id);
+       return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
 }

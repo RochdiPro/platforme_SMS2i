@@ -27,11 +27,9 @@ public class UpdatePhaseHandler implements RequestHandler<UpdatePhaseCommand, Vo
     public Void handle(UpdatePhaseCommand command) {
         Phase phase = modelMapper.map(command, Phase.class);
 
-        // Récupération du projet associé
-        Projet projectFound = projectRepositoryService.get(command.getProjet().getId());
+        Projet projectFound = projectRepositoryService.get(command.getProjet());
         phase.setProjet(projectFound);
 
-        // Mise à jour de la phase
         phaseRepositoryService.update(phase);
 
         return null; // retour Void

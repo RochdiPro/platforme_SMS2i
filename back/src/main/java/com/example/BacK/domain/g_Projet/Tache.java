@@ -51,12 +51,5 @@ public class Tache extends Auditable {
     @OneToMany(mappedBy = "tache", cascade = CascadeType.ALL)
     private List<Charge> charges;
 
-    @ElementCollection
-    private List<String> dependances;
-
-    @ElementCollection
-    private List<String> fichiers;
-
-
 }
 

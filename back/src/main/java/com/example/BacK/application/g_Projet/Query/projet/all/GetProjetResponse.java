@@ -1,21 +1,19 @@
-package com.example.BacK.application.models.g_projet;
+package com.example.BacK.application.g_Projet.Query.projet.all;
 
-import com.example.BacK.domain.g_Projet.Mission;
+import com.example.BacK.application.models.g_Client.ClientDTO;
+import com.example.BacK.application.models.g_projet.MissionDTO;
 import com.example.BacK.domain.g_Projet.enumEntity.PrioriteProjet;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutProjet;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class ProjetDTO {
-
+public class GetProjetResponse {
     private String id;
     private String nom;
     private String description;
@@ -23,7 +21,7 @@ public class ProjetDTO {
     private StatutProjet statut;
     private PrioriteProjet priorite;
     private String chefProjet;
-    private String client;
+    private ClientDTO client;
     private LocalDate dateDebut;
     private LocalDate dateFin;
     private LocalDate dateFinPrevue;
@@ -31,9 +29,6 @@ public class ProjetDTO {
     private Double coutReel;
     private Double progression;
     private List<MissionDTO> missions;
-    private List<PhaseDTO> phases;
     private List<String> documents;
     private List<String> tags;
-    private LocalDate createdAt;
-    private LocalDate updatedAt;
 }

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/Mission")
+@RequestMapping("api/mission")
 public class MissionController {
 
     private final Mediator mediator;

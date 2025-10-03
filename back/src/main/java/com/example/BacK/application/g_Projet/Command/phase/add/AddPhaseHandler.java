@@ -29,7 +29,7 @@ public class AddPhaseHandler implements RequestHandler<AddPhaseCommand, AddPhase
         Phase phase = modelMapper.map(command, Phase.class);
 
         // Récupération du projet associé
-        Projet projectFound = projectRepositoryService.get(command.getProjet().getId());
+        Projet projectFound = projectRepositoryService.get(command.getProjet());
         phase.setProjet(projectFound);
 
         // Ajout de la phase

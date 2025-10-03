@@ -1,6 +1,7 @@
 package com.example.BacK.domain.g_Client;
 
 import com.example.BacK.domain.g_Client.enumEntity.StatutFacture;
+import com.example.BacK.domain.g_Projet.Projet;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -39,5 +40,5 @@ public class FactureClient {
     // Relation vers ProjetClient (optionnelle)
     @ManyToOne
     @JoinColumn(name = "projet_id")
-    private ProjetClient projet;
+    private Projet projet;
 }

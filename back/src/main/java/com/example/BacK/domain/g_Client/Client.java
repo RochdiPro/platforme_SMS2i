@@ -2,9 +2,12 @@ package com.example.BacK.domain.g_Client;
 
 
 import com.example.BacK.domain.Auditable;
+import com.example.BacK.domain.g_Projet.Projet;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 @Entity
 @Getter
@@ -34,12 +37,14 @@ public class Client  extends Auditable {
     private String identifiantFiscal;
     private String rib;
     private int pointsFidelite;
-    // Relations
+
+    private LocalDateTime derniereInteraction;
+
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ContactClient> contacts;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ProjetClient> projets;
+    private List<Projet> projets;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FactureClient> factures;
@@ -52,9 +57,6 @@ public class Client  extends Auditable {
 
     @ElementCollection
     private List<String> documents;
-
-    @ElementCollection
-    private List<String> tags;
 
     private double chiffreAffaires;
 
