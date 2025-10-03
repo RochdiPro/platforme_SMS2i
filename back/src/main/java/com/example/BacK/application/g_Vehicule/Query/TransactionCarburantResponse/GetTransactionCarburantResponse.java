@@ -27,4 +27,6 @@ public class GetTransactionCarburantResponse {
     private String carteTelepeageId;
     private Double montantTelepeage;
     private Double kilometrage;
+    private Double ancienkilometrage;
+
 }

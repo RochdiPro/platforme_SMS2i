@@ -25,6 +25,7 @@ public class TransactionCarburant extends Auditable {
     private Double prixLitre;
     private Double montantTotal;
     private Double kilometrage;
+    private Double ancienkilometrage;
     private double consommation;
     private String carteTelepeageId;
     private Double montantTelepeage;

@@ -17,12 +17,11 @@ public class GetPhaseResponse {
     private String nom;
     private String description;
     private Integer ordre;
-    private PhaseType statut;
+    private String statut;
     private LocalDate dateDebut;
     private LocalDate dateFin;
     private Double progression;
     private Double budget;
     private ProjetDTO projet;
     private List<MissionDTO> missions;
-    private List<String> livrables;
 }

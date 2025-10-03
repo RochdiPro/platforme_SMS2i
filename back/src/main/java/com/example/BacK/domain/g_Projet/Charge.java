@@ -18,7 +18,6 @@ public class Charge  extends Auditable {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36)
     private String id;
-
     private String nom;
     private String prenom;
     private String poste;

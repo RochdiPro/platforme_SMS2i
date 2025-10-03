@@ -31,6 +31,7 @@ public class ProjetDTO {
     private Double coutReel;
     private Double progression;
     private List<MissionDTO> missions;
+    private List<PhaseDTO> phases;
     private List<String> documents;
     private List<String> tags;
     private LocalDate createdAt;

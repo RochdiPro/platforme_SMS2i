@@ -25,5 +25,7 @@ public class AddTransactionCarburantCommand {
     private String carteTelepeageId;
     private Double montantTelepeage;
     private Double kilometrage;
+    private Double ancienkilometrage;
+
 
 }

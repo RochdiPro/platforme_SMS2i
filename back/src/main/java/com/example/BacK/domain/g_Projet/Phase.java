@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -23,13 +24,10 @@ public class Phase extends Auditable {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36)
     private String id;
-
     private String nom;
     private String description;
     private Integer ordre;
-
-    @Enumerated(EnumType.STRING)
-    private PhaseType statut;
+    private String statut;
     private LocalDate dateDebut;
     private LocalDate dateFin;
     private Double progression;
@@ -39,10 +37,8 @@ public class Phase extends Auditable {
     @JoinColumn(name = "projet_id")
     private Projet projet;
 
-    @OneToMany(mappedBy = "phase", cascade = CascadeType.ALL)
-    private List<Mission> missions;
+    @OneToMany(mappedBy = "phase", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Mission> missions = new ArrayList<>();
 
-    @ElementCollection
-    private List<String> livrables;
 
 }

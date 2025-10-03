@@ -44,6 +44,7 @@ public class AddTransactionCarburantHandler implements RequestHandler<AddTransac
         transaction.setPrixLitre(command.getPrixLitre());
         transaction.setMontantTotal(command.getMontantTotal());
         transaction.setKilometrage(command.getKilometrage());
+        transaction.setAncienkilometrage(command.getAncienkilometrage());
         transaction.setTypeCarburant(command.getTypeCarburant());
         transaction.setConducteur(command.getConducteur());
         transaction.setDate(command.getDate());
