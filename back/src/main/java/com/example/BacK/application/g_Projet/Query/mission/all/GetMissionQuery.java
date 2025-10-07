@@ -1,4 +1,4 @@
-package com.example.BacK.application.g_Projet.Query.mission;
+package com.example.BacK.application.g_Projet.Query.mission.all;
 
 import com.example.BacK.domain.g_Projet.enumEntity.PrioriteMission;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutMission;

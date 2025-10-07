@@ -1,6 +1,6 @@
 package com.example.BacK.application.interfaces.g_Projet.phase;
 
-import com.example.BacK.application.g_Projet.Query.phase.GetPhaseResponse;
+import com.example.BacK.application.g_Projet.Query.phase.all.GetPhaseResponse;
 import com.example.BacK.domain.g_Projet.Phase;
 
 import java.util.List;

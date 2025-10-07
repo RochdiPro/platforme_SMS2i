@@ -27,10 +27,6 @@ public class UpdateTacheCommand {
     private Double dureeEstimee;
     private Double dureeReelle;
     private Double progression;
-    private MissionDTO mission;
-    private List<CommentaireTacheDTO> commentaires;
-    private List<EmployeAffecteDTO> employesAffectes;
-    private List<ChargeDTO> charges;
-    private List<String> dependances;
-    private List<String> fichiers;
+    private String mission;
+
 }

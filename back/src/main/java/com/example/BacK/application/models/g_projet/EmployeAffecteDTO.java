@@ -5,6 +5,7 @@ import com.example.BacK.domain.g_Projet.Tache;
 import com.example.BacK.domain.g_Projet.enumEntity.RoleProjet;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutAffectation;
 
+import com.example.BacK.domain.g_RH.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -17,10 +18,7 @@ import java.time.LocalDate;
 public class EmployeAffecteDTO {
 
     private String id;
-    private String employeId;
-    private String nom;
-    private String prenom;
-    private String poste;
+    private Employee  employee;
     private String email;
     private RoleProjet role;
     private LocalDate dateAffectation;

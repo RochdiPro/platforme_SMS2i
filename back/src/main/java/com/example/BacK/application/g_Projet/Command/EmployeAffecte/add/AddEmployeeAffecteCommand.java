@@ -18,16 +18,14 @@ import java.time.LocalDate;
 public class AddEmployeeAffecteCommand {
 
     private String employeId;
-    private String nom;
-    private String prenom;
-    private String poste;
-    private String email;
     private RoleProjet role;
     private LocalDate dateAffectation;
     private Double tauxHoraire;
     private Double heuresAllouees;
     private Double heuresRealisees;
     private StatutAffectation statut;
-    private String tache;
-    private String mission;
+    private String missionId;
+    private String tacheId;
+
+
 }

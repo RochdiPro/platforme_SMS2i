@@ -2,6 +2,7 @@ package com.example.BacK.domain.g_Projet;
 
 import com.example.BacK.domain.g_Projet.enumEntity.RoleProjet;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutAffectation;
+import com.example.BacK.domain.g_RH.Employee;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,7 +22,10 @@ public class EmployeAffecte {
     @EqualsAndHashCode.Include
     private String id;
 
-    private String employeId;
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
+
     private String nom;
     private String prenom;
     private String poste;

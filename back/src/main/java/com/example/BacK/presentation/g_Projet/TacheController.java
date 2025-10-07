@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/Tache")
+@RequestMapping("api/tache")
 public class TacheController {
 
     private final Mediator mediator;

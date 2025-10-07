@@ -1,4 +1,4 @@
-package com.example.BacK.application.g_Projet.Query.phase;
+package com.example.BacK.application.g_Projet.Query.phase.all;
 
 import com.example.BacK.application.interfaces.g_Projet.phase.IPhaseRespositoryService;
 import com.example.BacK.application.mediator.RequestHandler;

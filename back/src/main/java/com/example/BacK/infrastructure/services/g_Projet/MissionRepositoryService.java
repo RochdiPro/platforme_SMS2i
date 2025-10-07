@@ -1,6 +1,6 @@
 package com.example.BacK.infrastructure.services.g_Projet;
 
-import com.example.BacK.application.g_Projet.Query.mission.GetMissionResponse;
+import com.example.BacK.application.g_Projet.Query.mission.all.GetMissionResponse;
 import com.example.BacK.application.interfaces.g_Projet.mission.IMissionRepositoryService;
 import com.example.BacK.domain.g_Projet.Mission;
 import com.example.BacK.infrastructure.repository.g_Projet.MissionRepository;
