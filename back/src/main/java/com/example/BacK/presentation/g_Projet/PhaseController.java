@@ -3,7 +3,10 @@ import com.example.BacK.application.g_Projet.Command.phase.add.AddPhaseCommand;
 import com.example.BacK.application.g_Projet.Command.phase.add.AddPhaseResponse;
 import com.example.BacK.application.g_Projet.Command.phase.delete.DeletePhaseCommand;
 import com.example.BacK.application.g_Projet.Command.phase.update.UpdatePhaseCommand;
-import com.example.BacK.application.g_Projet.Query.phase.GetPhaseQuery;
+import com.example.BacK.application.g_Projet.Query.phase.all.GetPhaseQuery;
+import com.example.BacK.application.g_Projet.Query.phase.byId.GetPhaseByIDQuery;
+import com.example.BacK.application.g_Projet.Query.phase.byId.GetPhaseByIDResponse;
+import com.example.BacK.application.g_Projet.Query.projet.byId.GetProjetByIDQuery;
 import com.example.BacK.application.mediator.Mediator;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
@@ -70,4 +73,13 @@ public class PhaseController {
         GetPhaseQuery query = new GetPhaseQuery();
         return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
+
+    @Operation(summary = "Récupérer une phase par ID")
+    @GetMapping("/{id}")
+    public ResponseEntity<List<Object>>getById(@PathVariable String id) {
+        GetPhaseByIDQuery query = new GetPhaseByIDQuery(id);
+        return ResponseEntity.ok(mediator.sendToHandlers(query));
+    }
+
+
 }

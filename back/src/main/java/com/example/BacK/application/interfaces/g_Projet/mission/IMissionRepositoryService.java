@@ -1,6 +1,6 @@
 package com.example.BacK.application.interfaces.g_Projet.mission;
 
-import com.example.BacK.application.g_Projet.Query.mission.GetMissionResponse;
+import com.example.BacK.application.g_Projet.Query.mission.all.GetMissionResponse;
 import com.example.BacK.domain.g_Projet.Mission;
 
 import java.util.List;

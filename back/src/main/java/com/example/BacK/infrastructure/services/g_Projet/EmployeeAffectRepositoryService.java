@@ -1,6 +1,6 @@
 package com.example.BacK.infrastructure.services.g_Projet;
 
-import com.example.BacK.application.g_Projet.Query.EmployeAffecte.GetEmployeAffecteResponse;
+import com.example.BacK.application.g_Projet.Query.EmployeAffecte.all.GetEmployeAffecteResponse;
 import com.example.BacK.application.interfaces.g_Projet.EmployeeAffecte.IEmployeeAffecteRepositoryService;
 import com.example.BacK.domain.g_Projet.EmployeAffecte;
 import com.example.BacK.infrastructure.repository.g_Projet.EmployeeAffecteRepository;

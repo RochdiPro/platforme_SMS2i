@@ -1,9 +1,9 @@
-package com.example.BacK.application.g_Projet.Command.Tache.update;
+package com.example.BacK.application.g_Projet.Query.Tache.all;
 
 import com.example.BacK.application.models.g_projet.ChargeDTO;
 import com.example.BacK.application.models.g_projet.CommentaireTacheDTO;
-import com.example.BacK.application.models.g_projet.EmployeAffecteDTO;
 import com.example.BacK.application.models.g_projet.MissionDTO;
+import com.example.BacK.application.models.g_rh.EmployeeDTO;
 import com.example.BacK.domain.g_Projet.enumEntity.PrioriteTache;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutTache;
 import lombok.AllArgsConstructor;
@@ -12,11 +12,10 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdateTacheCommand {
+public class GetTacheResponse {
     private String id;
     private String nom;
     private String description;
@@ -27,6 +26,9 @@ public class UpdateTacheCommand {
     private Double dureeEstimee;
     private Double dureeReelle;
     private Double progression;
-    private String mission;
+    private MissionDTO mission;
+    private EmployeeDTO employee;
+    private List<CommentaireTacheDTO> commentaires;
+    private List<ChargeDTO> charges;
 
 }

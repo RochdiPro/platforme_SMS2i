@@ -4,7 +4,8 @@ import com.example.BacK.application.g_Projet.Command.Tache.Delete.DeleteTacheCom
 import com.example.BacK.application.g_Projet.Command.Tache.add.AddTacheCommand;
 import com.example.BacK.application.g_Projet.Command.Tache.add.AddTacheResponse;
 import com.example.BacK.application.g_Projet.Command.Tache.update.UpdateTacheCommand;
-import com.example.BacK.application.g_Projet.Query.Tache.GetTacheQuery;
+import com.example.BacK.application.g_Projet.Query.Tache.ById.GetTacheByIDQuery;
+import com.example.BacK.application.g_Projet.Query.Tache.all.GetTacheQuery;
 import com.example.BacK.application.mediator.Mediator;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/Tache")
+@RequestMapping("api/tache")
 public class TacheController {
 
     private final Mediator mediator;
@@ -69,6 +70,13 @@ public class TacheController {
     @GetMapping
     public ResponseEntity<List<Object>> getAll() {
         GetTacheQuery query = new GetTacheQuery();
+        return ResponseEntity.ok(mediator.sendToHandlers(query));
+    }
+
+    @Operation(summary = "Récupérer un Tache par ID")
+    @GetMapping("/{id}")
+    public ResponseEntity<List<Object>> getById(@PathVariable String id) {
+        GetTacheByIDQuery query = new GetTacheByIDQuery(id);
         return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
 }

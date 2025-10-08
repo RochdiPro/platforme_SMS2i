@@ -1,4 +1,4 @@
-package com.example.BacK.application.g_Projet.Query.Tache;
+package com.example.BacK.application.g_Projet.Query.Tache.all;
 
 import com.example.BacK.application.models.g_projet.ChargeDTO;
 import com.example.BacK.application.models.g_projet.CommentaireTacheDTO;
@@ -25,11 +25,5 @@ public class GetTacheQuery {
     private LocalDate dateFin;
     private Double dureeEstimee;
     private Double dureeReelle;
-    private Double progression;
-    private MissionDTO mission;
-    private List<CommentaireTacheDTO> commentaires;
-    private List<EmployeAffecteDTO> employesAffectes;
-    private List<ChargeDTO> charges;
-    private List<String> dependances;
-    private List<String> fichiers;
+
 }

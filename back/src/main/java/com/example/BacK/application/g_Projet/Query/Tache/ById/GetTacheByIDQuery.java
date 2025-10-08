@@ -1,4 +1,4 @@
-package com.example.BacK.application.g_Projet.Command.Tache.update;
+package com.example.BacK.application.g_Projet.Query.Tache.ById;
 
 import com.example.BacK.application.models.g_projet.ChargeDTO;
 import com.example.BacK.application.models.g_projet.CommentaireTacheDTO;
@@ -12,21 +12,10 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdateTacheCommand {
+public class GetTacheByIDQuery {
     private String id;
-    private String nom;
-    private String description;
-    private StatutTache statut;
-    private PrioriteTache priorite;
-    private LocalDate dateDebut;
-    private LocalDate dateFin;
-    private Double dureeEstimee;
-    private Double dureeReelle;
-    private Double progression;
-    private String mission;
 
 }

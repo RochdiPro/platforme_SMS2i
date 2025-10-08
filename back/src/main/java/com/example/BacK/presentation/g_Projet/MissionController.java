@@ -4,7 +4,9 @@ import com.example.BacK.application.g_Projet.Command.mission.add.AddMissionComma
 import com.example.BacK.application.g_Projet.Command.mission.add.AddMissionResponse;
 import com.example.BacK.application.g_Projet.Command.mission.delete.DeleteMissionCommand;
 import com.example.BacK.application.g_Projet.Command.mission.update.UpdateMissionCommand;
-import com.example.BacK.application.g_Projet.Query.mission.GetMissionQuery;
+import com.example.BacK.application.g_Projet.Query.mission.all.GetMissionQuery;
+import com.example.BacK.application.g_Projet.Query.mission.byId.GetMissionByIDQuery;
+import com.example.BacK.application.g_Projet.Query.phase.byId.GetPhaseByIDQuery;
 import com.example.BacK.application.mediator.Mediator;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
@@ -69,6 +71,13 @@ public class MissionController {
     @GetMapping
     public ResponseEntity<List<Object>> getAll() {
         GetMissionQuery query = new GetMissionQuery();
+        return ResponseEntity.ok(mediator.sendToHandlers(query));
+    }
+
+    @Operation(summary = "Récupérer une missions par ID")
+    @GetMapping("/{id}")
+    public ResponseEntity<List<Object>>getById(@PathVariable String id) {
+        GetMissionByIDQuery query = new GetMissionByIDQuery(id);
         return ResponseEntity.ok(mediator.sendToHandlers(query));
     }
 }

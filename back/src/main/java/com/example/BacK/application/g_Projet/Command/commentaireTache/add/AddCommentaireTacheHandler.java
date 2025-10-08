@@ -34,7 +34,7 @@ public class AddCommentaireTacheHandler implements RequestHandler<AddCommentaire
         CommentaireTache commentaire = modelMapper.map(command, CommentaireTache.class);
 
         // Récupération de la tâche
-        Tache tacheFound = tacheRepositoryService.get(command.getTache());
+        Tache tacheFound = tacheRepositoryService.get(command.getTacheId());
         commentaire.setTache(tacheFound);
 
         // Ajout du commentaire

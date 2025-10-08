@@ -1,4 +1,4 @@
-package com.example.BacK.application.g_Projet.Query.mission;
+package com.example.BacK.application.g_Projet.Query.mission.all;
 
 
 import com.example.BacK.application.interfaces.g_Projet.mission.IMissionRepositoryService;
@@ -21,7 +21,9 @@ public class GetMissionHandler implements RequestHandler<GetMissionQuery, List<G
 
     @Override
     public List<GetMissionResponse> handle(GetMissionQuery command) {
-        return  _iMissionRepositoryService.getall();
+          List<GetMissionResponse> l =  _iMissionRepositoryService.getall();
+          System.out.println(l);
+        return l;
     }
 }
 

@@ -1,6 +1,6 @@
 package com.example.BacK.infrastructure.services.g_Projet;
 
-import com.example.BacK.application.g_Projet.Query.phase.GetPhaseResponse;
+import com.example.BacK.application.g_Projet.Query.phase.all.GetPhaseResponse;
 import com.example.BacK.application.interfaces.g_Projet.phase.IPhaseRespositoryService;
 import com.example.BacK.domain.g_Projet.Phase;
 import com.example.BacK.infrastructure.repository.g_Projet.PhaseRepository;

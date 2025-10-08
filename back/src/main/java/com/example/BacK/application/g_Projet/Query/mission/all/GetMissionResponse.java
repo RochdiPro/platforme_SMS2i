@@ -1,6 +1,8 @@
-package com.example.BacK.application.g_Projet.Query.mission;
+package com.example.BacK.application.g_Projet.Query.mission.all;
 
 import com.example.BacK.application.models.g_projet.EmployeAffecteDTO;
+import com.example.BacK.application.models.g_projet.PhaseDTO;
+import com.example.BacK.application.models.g_projet.ProjetDTO;
 import com.example.BacK.application.models.g_projet.TacheDTO;
 import com.example.BacK.domain.g_Projet.enumEntity.PrioriteMission;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutMission;
@@ -25,10 +27,9 @@ public class GetMissionResponse {
     private LocalDate dateFin;
     private Double progression;
     private Double budget;
-    private String projet;
-    private String phase;
+    private ProjetDTO projet;
+    private PhaseDTO phase;
     private List<TacheDTO> taches;
     private List<EmployeAffecteDTO> employesAffectes;
-    private List<String> dependances;
-    private List<String> livrables;
+
 }

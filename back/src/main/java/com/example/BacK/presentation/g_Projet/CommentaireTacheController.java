@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/CommentaireTache")
+@RequestMapping("api/commentaireTache")
 public class CommentaireTacheController {
 
     private final Mediator mediator;

@@ -27,7 +27,7 @@ public class AddTacheCommand {
     private Double dureeEstimee;
     private Double dureeReelle;
     private Double progression;
-    private MissionDTO mission;
+    private String missionId;
 
 
 }
