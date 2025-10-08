@@ -32,7 +32,7 @@ public class AddTacheHandler implements RequestHandler<AddTacheCommand, AddTache
         Tache tache = modelMapper.map(command, Tache.class);
 
         // Récupération de la mission associée
-        Mission missionFound = missionRepositoryService.get(command.getMission());
+        Mission missionFound = missionRepositoryService.get(command.getMissionId());
         tache.setMission(missionFound);
 
         /* Si nécessaire, assigner des employés

@@ -1,4 +1,4 @@
-package com.example.BacK.application.g_Projet.Query.EmployeAffecte;
+package com.example.BacK.application.g_Projet.Query.EmployeAffecte.all;
 
 import com.example.BacK.application.models.g_projet.MissionDTO;
 import com.example.BacK.application.models.g_projet.TacheDTO;

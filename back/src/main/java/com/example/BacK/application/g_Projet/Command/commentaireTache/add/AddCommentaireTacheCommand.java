@@ -11,10 +11,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AddCommentaireTacheCommand {
-
     private String auteur;
     private String contenu;
-    private LocalDate date;
     private TypeCommentaire type;
-    private String tache;
+    private String tacheId;
 }

@@ -1,9 +1,9 @@
-package com.example.BacK.application.g_Projet.Query.Tache;
+package com.example.BacK.application.g_Projet.Query.Tache.ById;
 
 import com.example.BacK.application.models.g_projet.ChargeDTO;
 import com.example.BacK.application.models.g_projet.CommentaireTacheDTO;
-import com.example.BacK.application.models.g_projet.EmployeAffecteDTO;
 import com.example.BacK.application.models.g_projet.MissionDTO;
+import com.example.BacK.application.models.g_rh.EmployeeDTO;
 import com.example.BacK.domain.g_Projet.enumEntity.PrioriteTache;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutTache;
 import lombok.AllArgsConstructor;
@@ -15,7 +15,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetTacheResponse {
+public class GetTacheByIDResponse {
     private String id;
     private String nom;
     private String description;
@@ -27,9 +27,8 @@ public class GetTacheResponse {
     private Double dureeReelle;
     private Double progression;
     private MissionDTO mission;
+    private EmployeeDTO employee;
     private List<CommentaireTacheDTO> commentaires;
-    private List<EmployeAffecteDTO> employesAffectes;
     private List<ChargeDTO> charges;
-    private List<String> dependances;
-    private List<String> fichiers;
+
 }

@@ -1,6 +1,6 @@
 package com.example.BacK.infrastructure.services.g_Projet;
 
-import com.example.BacK.application.g_Projet.Query.Tache.GetTacheResponse;
+import com.example.BacK.application.g_Projet.Query.Tache.all.GetTacheResponse;
 import com.example.BacK.application.interfaces.g_Projet.tache.ITacheRepositoryService;
 import com.example.BacK.domain.g_Projet.Tache;
 import com.example.BacK.infrastructure.repository.g_Projet.TacheRepository;

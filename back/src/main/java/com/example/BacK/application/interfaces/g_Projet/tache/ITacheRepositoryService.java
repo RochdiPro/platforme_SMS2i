@@ -1,6 +1,6 @@
 package com.example.BacK.application.interfaces.g_Projet.tache;
 
-import com.example.BacK.application.g_Projet.Query.Tache.GetTacheResponse;
+import com.example.BacK.application.g_Projet.Query.Tache.all.GetTacheResponse;
 import com.example.BacK.domain.g_Projet.Tache;
 
 import java.util.List;

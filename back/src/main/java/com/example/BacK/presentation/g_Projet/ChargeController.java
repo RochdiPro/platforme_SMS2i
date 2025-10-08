@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/Charge")
+@RequestMapping("api/charge")
 public class ChargeController {
 
     private final Mediator mediator;

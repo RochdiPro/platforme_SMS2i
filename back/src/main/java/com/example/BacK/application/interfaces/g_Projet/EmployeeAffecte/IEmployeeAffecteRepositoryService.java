@@ -1,6 +1,6 @@
 package com.example.BacK.application.interfaces.g_Projet.EmployeeAffecte;
 
-import com.example.BacK.application.g_Projet.Query.EmployeAffecte.GetEmployeAffecteResponse;
+import com.example.BacK.application.g_Projet.Query.EmployeAffecte.all.GetEmployeAffecteResponse;
 import com.example.BacK.domain.g_Projet.EmployeAffecte;
 
 import java.util.List;

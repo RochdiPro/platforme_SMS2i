@@ -1,4 +1,4 @@
-package com.example.BacK.application.g_Projet.Query.EmployeAffecte;
+package com.example.BacK.application.g_Projet.Query.EmployeAffecte.all;
 
 import com.example.BacK.domain.g_Projet.enumEntity.RoleProjet;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutAffectation;

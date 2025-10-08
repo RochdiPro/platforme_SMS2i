@@ -12,16 +12,9 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GetChargeQuery {
-    private String id;
     private String nom;
-    private String prenom;
-    private String poste;
-    private Double tauxHoraire;
-    private Double heuresAllouees;
-    private Double heuresRealisees;
-    private LocalDate dateDebut;
-    private LocalDate dateFin;
+    private double montant;
     private String description;
-    private TacheDTO tache;
-    private EmployeeDTO employe;
+    private String tache;
+    private String employe;
 }

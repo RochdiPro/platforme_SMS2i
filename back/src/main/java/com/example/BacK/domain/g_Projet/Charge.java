@@ -19,14 +19,8 @@ public class Charge  extends Auditable {
     @Column(length = 36)
     private String id;
     private String nom;
-    private String prenom;
-    private String poste;
-    private Double tauxHoraire;
-    private Double heuresAllouees;
-    private Double heuresRealisees;
-    private LocalDate dateDebut;
-    private LocalDate dateFin;
     private String description;
+    private double montant;
 
     @ManyToOne
     @JoinColumn(name = "tache_id")

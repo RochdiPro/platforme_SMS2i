@@ -4,6 +4,7 @@ package com.example.BacK.domain.g_Projet;
 import com.example.BacK.domain.Auditable;
 import com.example.BacK.domain.g_Projet.enumEntity.PrioriteTache;
 import com.example.BacK.domain.g_Projet.enumEntity.StatutTache;
+import com.example.BacK.domain.g_RH.Employee;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
@@ -42,11 +43,12 @@ public class Tache extends Auditable {
     @JoinColumn(name = "mission_id")
     private Mission mission;
 
-    @OneToMany(mappedBy = "tache", cascade = CascadeType.ALL)
-    private List<CommentaireTache> commentaires;
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
 
     @OneToMany(mappedBy = "tache", cascade = CascadeType.ALL)
-    private List<EmployeAffecte> employesAffectes;
+    private List<CommentaireTache> commentaires;
 
     @OneToMany(mappedBy = "tache", cascade = CascadeType.ALL)
     private List<Charge> charges;

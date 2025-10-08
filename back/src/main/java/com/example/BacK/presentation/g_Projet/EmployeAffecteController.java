@@ -3,7 +3,7 @@ import com.example.BacK.application.g_Projet.Command.EmployeAffecte.add.AddEmplo
 import com.example.BacK.application.g_Projet.Command.EmployeAffecte.add.AddEmployeeAffecteResponse;
 import com.example.BacK.application.g_Projet.Command.EmployeAffecte.delete.DeleteEmployeeAffecteCommand;
 import com.example.BacK.application.g_Projet.Command.EmployeAffecte.update.UpdateEmployeeAffecteCommand;
-import com.example.BacK.application.g_Projet.Query.EmployeAffecte.GetEmployeAffecteQuery;
+import com.example.BacK.application.g_Projet.Query.EmployeAffecte.all.GetEmployeAffecteQuery;
 import com.example.BacK.application.mediator.Mediator;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
