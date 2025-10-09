@@ -26,9 +26,6 @@ public class UpdateProjetCommand {
     private LocalDate dateFin;
     private LocalDate dateFinPrevue;
     private Double budget;
-    private Double coutReel;
-    private Double progression;
-    private List<MissionDTO> missions;
-    private List<String> documents;
-    private List<String> tags;
+
+
 }
