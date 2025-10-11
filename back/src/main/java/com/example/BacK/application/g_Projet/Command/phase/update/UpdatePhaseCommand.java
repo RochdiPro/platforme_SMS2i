@@ -21,7 +21,7 @@ public class UpdatePhaseCommand {
     private String statut;
     private LocalDate dateDebut;
     private LocalDate dateFin;
-    private Double progression;
+
     private Double budget;
     private String projet;
 

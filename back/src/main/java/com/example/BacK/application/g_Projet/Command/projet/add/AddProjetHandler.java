@@ -30,6 +30,8 @@ public class AddProjetHandler implements RequestHandler<AddProjetCommand, AddPro
             throw new RuntimeException("Client introuvable avec l'id : " + command.getClient());
         }
         project.setClient(foundClient);
+        project.setCoutReel(Double.parseDouble("0"));
+        project.setProgression(Double.parseDouble("0"));
         String id = projectRepositoryService.add(project);
         return new AddProjetResponse(id);
     }

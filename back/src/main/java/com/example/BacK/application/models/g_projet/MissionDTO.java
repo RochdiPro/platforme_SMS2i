@@ -33,7 +33,6 @@ public class MissionDTO {
     private PhaseDTO phase;
     private List<TacheDTO> taches;
     private List<EmployeAffecteDTO> employesAffectes;
-    private List<String> dependances;
-    private List<String> livrables;
+
 
 }
